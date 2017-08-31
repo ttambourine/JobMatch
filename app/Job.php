@@ -8,12 +8,20 @@ class Job extends Model {
     protected $table = "jobs";
 
     protected $fillable = [
-        'jobid', 'jobowner', 'description', 'amount', 'due_date', 'applicantid', 'tags'
+        'id', 'userid', 'description', 'amount', 'due_date', 'applicantid', 'tags'
     ];
 
     // applicant id = accepted applicant
 
     public function applications() {
-        return $this->hasMany('App\Applicant', 'jobid');
+        return $this->hasMany('App\Applicant', 'id');
+    }
+
+    public function owner() {
+    	return $this->belongsTo('App\User', 'userid');
+    }
+
+    public function tags() {
+    	return $this->belongsTo('App\JobTags', 'id');
     }
 }
