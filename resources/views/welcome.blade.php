@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -5,91 +6,57 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Jobmatch</title>
 
-        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+		<link rel="stylesheet" type="text/css" href="../assets/css/css/style.css">	
     </head>
+	
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+	<div class="centre">
+	
+		<?php include("{$_SERVER['DOCUMENT_ROOT']}/views/header.php");?>
+		
+		<div class="banner">
+			<img src="http://www.thaiembassy.com/wp-content/uploads/2015/04/working-in-thailand.jpg" class="imgBan" >
+		</div>
+		<div class="stretch">
+			<h1> Get yourself JobMatched Today! </h1>
+		</div>
+		<div class="Row">
+			<div class="picBox">
+				<img src="http://i.imgur.com/6I5Rtw4.png" width="250" height="170" class="leftImg">
+				<img src="http://i.imgur.com/J5qC1n6.png" width="250" height="170" class="rowImg">
+				<img src="http://i.imgur.com/CbMrvoh.png" width="250" height="170" class="rowImg">
+			</div>
+		</div>
+		<div class="Row2">
+			<div class="picBox">
+				<img src="http://i.imgur.com/PLWvz7Y.png" width="250" height="170" class="leftImg">
+				<img src="http://i.imgur.com/qlTmPX2.png" width="250" height="170" class="rowImg">
+				<img src="http://i.imgur.com/8nCdQMb.png" width="250" height="170" class="rowImg">
+			</div>
+		</div>
+		<div class="stretch">
+			<div class="middleLinks">
+				<a href="https://laravel.com/docs" class="mainLink">Browse All Jobs</a>
+			</div>
+		</div>
+		<div class="stretch">
+				<div class="line"></div>
+				<h1> What is JobMatch? </h1>
+				<br>
+				<h5 class="blurb"> JobMatch is an online communities of those looking for jobs and <br>
+				those that have jobs they need completed! <br>
+				Complete your profile, then post a job, apply, or wait to be matched! 
+				</h5>
+				<div class="stretch">
+					<div class="middleLinks">
+						<a href="/about" class="mainLink">Want to know more?</a>
+					</div>
+				</div>
+		</div>
+		<?php include("{$_SERVER['DOCUMENT_ROOT']}/views/footer.php");?>
+		
+	</body>
 </html>
