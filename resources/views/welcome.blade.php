@@ -15,7 +15,7 @@
     <body>
 	<div class="centre">
 	
-		<?php include("{$_SERVER['DOCUMENT_ROOT']}/views/header.php");?>
+		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/header.php");?>
 		
 		<div class="banner">
 			<img src="http://www.thaiembassy.com/wp-content/uploads/2015/04/working-in-thailand.jpg" class="imgBan" >
@@ -56,7 +56,7 @@
 					</div>
 				</div>
 		</div>
-		<?php include("{$_SERVER['DOCUMENT_ROOT']}/views/footer.php");?>
+		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
 		
 	</body>
 </html>

@@ -9,14 +9,14 @@
         <title>Jobmatch</title>
 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="../css/style.css">	
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">	
 		
     </head>
 	
     <body>
 	<div class="centre">
 	
-		<?php include("{$_SERVER['DOCUMENT_ROOT']}/views/header.php");?>
+		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/header.php");?>
 
 		<div class="thinBanner">
 			<img src="http://i.imgur.com/JKdd1ns.jpg" class="thinBan">
@@ -90,7 +90,7 @@
 		
 		<br>
 		<br>
-		<?php include("{$_SERVER['DOCUMENT_ROOT']}/views/footer.php");?>
+		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
 		
 	</div>
 	</body>
