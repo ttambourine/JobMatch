@@ -60,7 +60,7 @@
 		
 		<br>
 		<br>
-		<?php include("{$_SERVER['DOCUMENT_ROOT']}/views/footer.php");?>
+		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
 		
 	</div>
 	</body>
