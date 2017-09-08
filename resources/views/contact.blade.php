@@ -9,7 +9,7 @@
         <title>Jobmatch</title>
 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">	
+		<link rel="stylesheet" type="text/css" href="../resources/assets/css/style.css">	
     </head>
 	
     <body>
