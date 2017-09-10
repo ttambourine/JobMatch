@@ -15,6 +15,8 @@
 		width: 954px;
 		height: 175px;
 	}
+	
+	
 	/*keeps links in line and styles*/
 	.leftLinks {
 		padding: 20px;
@@ -157,6 +159,15 @@
 	
 	
 	/*style text*/
+	h1 {
+		font-size: 25px;
+		text-align: center;
+		background: #FF4500;
+		color: white;
+		padding: 22px 25px;
+		margin: auto;
+		margin-bottom: 20px;
+	}
 	h3 {
 		padding-top: 10px;
 	}
@@ -273,16 +284,6 @@
 	
 	
 	/*This part is for the contact form*/
-	input[type=text], input[type=email], select, textarea {
-		width: 954px; 
-		padding: 12px;   
-		border: 1px solid #ccc; 
-		border-radius: 4px; 
-		box-sizing: border-box; 
-		margin-top: 6px; 
-		margin-bottom: 16px; 
-		resize: vertical 
-	}
 	input[type=submit] {
 		background-color: #FF4500;
 		color: white;
@@ -299,3 +300,262 @@
 		border-radius: 5px;
 		padding: 20px;
 	}
+
+
+
+/*login*/
+.forgotA {
+	color: #F00;
+}
+.forgotA:hover {
+	color: #FF4500;
+}
+.middleForm {
+	margin: 0 auto;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.loginFormBox {
+	margin-top: 20px;
+	background: grey;
+	padding: 40px;
+	width: 700px;
+	margin: 0 auto;
+	border-radius: 7px;
+}
+
+.tab-group {
+  list-style: none;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #ffffff;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+.tab-group li a:hover {
+  background: #cc3600;
+  color: #ffffff;
+}
+.tab-group .active a {
+  background: #FF4500;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+label {
+	position: absolute;
+	width: 
+	-webkit-transform: translateY(6px);
+	transform: translateY(6px);
+	left: 13px;
+	color: rgba(255, 255, 255, 0.5);
+	-webkit-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+	-webkit-backface-visibility: hidden;
+	font-size: 22px;
+}
+
+label.active {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  left: 2px;
+  font-size: 16px;
+}
+
+label.highlight {
+  color: #ffffff;
+}
+
+input, textarea {
+  font-size: 15px;
+  display: block;
+  width: 50%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: #FF4500;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.topLeft {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.topRight {
+  float: right;
+  width: 48%;
+}
+
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+  color;#ff4500
+}
+
+/*account css*/
+
+
+.logRegDes {
+  border-radius: 5px;
+  width:100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+p span {
+  color: #F00;
+}
+
+p {
+  margin: 0px;
+  font-weight: 500;
+  line-height: 2;
+  color:#ffffff;
+}
+
+input {
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 40px;
+  float: left;
+  padding: 0px 15px;
+}
+
+
+
+::-webkit-input-placeholder {
+    text-align: center;
+    color: black;
+}
+
+.form-group {
+  overflow: hidden;
+  clear: both;
+}
+
+.icon-case {
+  width: 35px;
+  float: left;
+  border-radius: 5px 0px 0px 5px;
+  background:#ffffff;
+  height:42px;
+  position: relative;
+  text-align: center;
+  line-height:40px;
+}
+
+.contentform {
+	margin: 0 auto;
+	width: 100%;
+}
+.contentformBox {
+	margin-top: 20px;
+	background: grey;
+	padding: 40px;
+	width: 700px;
+	margin: 0 auto;
+	border-radius: 7px;
+}
+
+
+.submitAccForm, .submitLogForm, .submitRegForm  {
+  margin: 0 auto;
+  margin-left: 25%;
+  margin-bottom: 15px;
+  background-color: #FF4500;
+  color: #FFF;
+  text-align: center;
+  width: 50%;
+  height: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 7px 7px 7px 7px;
+  border-color: #FF4500;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+textarea {
+  border-radius: 2px 2px 2px 2px;
+  width: 621px;
+  height: 100px;
+  padding: 10px 5px 5px 10px;
+  resize: none;
+  border: 2px solid #a0b3b0;
+}
+
+
+/*formBoxes*/
+.leftcontact {
+  width:49.5%; 
+  float: left;
+  box-sizing: border-box;
+  padding: 0px 15px 0px 0px;
+}
+.rightcontact {
+  width:49.5%;
+  box-sizing: border-box;
+  float: right;
+}
+.centreAccount {
+	padding-top: 15px;
+	clear: both;
+}
+
+#date-of-birth-input input {
+    width: 31%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.dropdown input[type="text"],
+.dropdown textarea,
+.dropdown select,
+.dropdown textarea.form-control {
+	height: 45px;
+    width: 258px;
+    margin: 0;
+    padding: 0 20px;
+    background: #fff;
+    border: 3px solid #fff;
+    font-size: 16px;
+    line-height: 20px;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
