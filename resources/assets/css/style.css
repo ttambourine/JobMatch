@@ -39,14 +39,14 @@
 		margin-top: 15px;
 	}
 	.aboutButtonBox {
-		margin: 0 auto;
-		padding: 20px;
-		width: 300px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		background: linear-gradient(#FF4500, #ff6a32);
-		border-radius: 20px;
-		margin-top: 15px;
+	margin: 0 auto;
+    padding: 20px;
+    width: 350px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(#FF4500, #ff6a32);
+    border-radius: 20px;
+    margin-top: 15px;
 	}
 	.rightLinks {
 		padding-top: 10px;
