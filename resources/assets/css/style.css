@@ -295,9 +295,11 @@
 		background-color: #ff6a32;
 	}
 	.container {
-		width: 954;
+		width: 660px;
 		border-radius: 5px;
 		padding: 20px;
+		margin: 0 auto;
+		margin-bottom: 60px;
 	}
 
 
