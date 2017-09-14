@@ -256,18 +256,14 @@
 	
 	/*This part is for the FAQ accordian*/
 	button.accordion {
-		text-align: center;
-		margin: 0 auto;
-		width: 800px;
-		background-color: #eee;
-		color: #FF4500;
-		cursor: pointer;
-		padding: 18px;
-		text-align: left;
-		border: none;
-		outline: none;
-		transition: 0.4s;
-		border: 1px solid black;
+	margin: 0 auto;
+    width: 660px;
+    background-color: #F1F1F1;
+    color: #FF4500;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    transition: 0.4s;
 	}
 	button.accordion.active, button.accordion:hover {
 		background-color: #ddd;
