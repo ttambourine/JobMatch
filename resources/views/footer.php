@@ -1,7 +1,6 @@
 <?php
 echo "
 		<div class='footer'>
-		<div class='footBox'>
 			<div class='leftShare'>
 				<a href='/' class='footerTop'><h5>Home</h5></a>
 			</div>
@@ -31,7 +30,6 @@ echo "
 					<a href='/contact'class='footerBot'>Contact Us</a>
 				</h6>
 			</div>
-		</div>
 		</div>
 ";
 ?>
