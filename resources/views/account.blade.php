@@ -41,12 +41,6 @@
 			<p>Skills<span>*</span></p>
                 <select id="tags">
                     <option value="" disabled="disabled" selected="selected">Please select an option</option>
-                    <option value="1">Information Technology</option>
-                    <option value="2">Electrician</option>
-                    <option value="3">Plumber</option>
-                    <option value="4">Carpenter</option>
-                    <option value="5">Architecture</option>
-                    <option value="6">Artist</option>
                 </select>
 			</div>
 
@@ -94,7 +88,7 @@
 	<script>
 		$(document).ready(function(){
 			$.getJSON( "api/list_tags", function( data ) {
-			 	var listItems= "";
+			 	var listItems= "<option value='' disabled selected>Please select an option</option>";
 				for (var i = 0; i < data.length; i++){
 					listItems+= "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
 				}
