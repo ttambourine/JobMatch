@@ -44,6 +44,7 @@
 		
 		<br>
 		<br>
+		</div>
 		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
 		<script>
 		var acc = document.getElementsByClassName("accordion");
@@ -61,6 +62,6 @@
 			}
 		}
 		</script>
-	</div>
+	
 	</body>
 </html>
