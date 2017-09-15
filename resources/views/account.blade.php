@@ -39,7 +39,7 @@
             <br>
             <div class="dropdown">
 			<p>Skills<span>*</span></p>
-                <select>
+                <select id="tags">
                     <option value="" disabled="disabled" selected="selected">Please select an option</option>
                     <option value="1">Information Technology</option>
                     <option value="2">Electrician</option>
@@ -67,7 +67,7 @@
 			</div>
         
             <div class="form-group">
-				<p>location<span>*</span></p>	
+				<p>Location<span>*</span></p>	
 				<input type="text" name="location" id="location" maxlength="20" required />
 			</div>
 
@@ -91,6 +91,17 @@
 </div>
    		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
 		
+	<script>
+		$(document).ready(function(){
+			$.getJSON( "api/list_tags", function( data ) {
+			 	var listItems= "";
+				for (var i = 0; i < data.length; i++){
+					listItems+= "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
+				}
+				$("#tags").html(listItems);
+			});
+	    }); 
+	</script>
 </body>
 </html>
   
