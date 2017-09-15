@@ -12,9 +12,9 @@ echo"
 			<div class='rightLinks'>
 				<a href='/about' class='secondLink'>Help</a>
 				<div class='gap'></div>
-				<a href='https://laracasts.com' class='secondLink'>Sign Up</a>
+				<a href='/login' class='secondLink'>Sign Up</a>
 				<div class='gap'></div>
-				<a href='https://laracasts.com' class='secondLink'>Login</a>
+				<a href='/login' class='secondLink'>Login</a>
 			</div>
 		</div>
 ";
