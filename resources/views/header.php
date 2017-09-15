@@ -1,5 +1,4 @@
-<?php
-echo" 
+
 		<div class='navBar'>
 			<div class='box'>
 				<a href='/' class='JobMatch'><h1> JobMatch </h1></a>
@@ -17,5 +16,3 @@ echo"
 				<a href='/login' class='secondLink'>Login</a>
 			</div>
 		</div>
-";
-?>

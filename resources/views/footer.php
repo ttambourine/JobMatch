@@ -1,5 +1,4 @@
-<?php
-echo "
+
 		<div class='footer'>
 			<div class='leftShare'>
 				<a href='/' class='footerTop'><h5>Home</h5></a>
@@ -22,11 +21,8 @@ echo "
 			</div>
 			<div class='share'>
 				<a href='/about' class='footerTop'><h5>Help</h5></a>
-				<a href='/about' class='footerBot'><h6>About</a> <br>
-					<a href='/faq'class='footerBot'>FAQ </a><br>
-					<a href='/contact'class='footerBot'>Contact Us</a>
-				</h6>
+				<a href='/about' class='footerBot'><h6>About</h6></a> <br>
+					<a href='/faq'class='footerBot'><h6>FAQ </h6></a><br>
+					<a href='/contact'class='footerBot'><h6>Contact Us</h6></a>
 			</div>
 		</div>
-";
-?>
