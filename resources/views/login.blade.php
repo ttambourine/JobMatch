@@ -18,7 +18,6 @@
 	<div class="contentformBox">
       
 		<ul class="tab-group">
-			<li class="tab"><a href="#signup">Sign Up</a></li>
 			<li class="tab active"><a href="#login">Log In</a></li>
 		</ul>
       
@@ -45,43 +44,6 @@
 				</div>
 				</form>
 			</div>
-        
-			<div id="signup">   
-				<h1>Sign Up for Free</h1>
-          
-				<form action="/" method="post">
-				<div class="logRegDes">
-					<div class="topLeft">
-						<div class="form-group">
-							<br>
-							<p> First Name <span class="req">*</span> </p>
-							<input type="text" name="fName" id="lName" required />
-						</div>
-					</div>
-					<div class="topRight">
-						<div class="form-group">
-							<br>
-							<p> Last Name <span class="req">*</span> </p>
-							<input type="text" name="lName" id="lName" required />
-						</div>
-					</div>
-					
-					<div class="form-group">
-						<br>
-						<p> Email Address <span class="req">*</span> </p>
-						<input type="email" name="email" id="email" required />
-					</div>
-					<div class="form-group">
-						<br>
-						<p> Password <span class="req">*</span> </p>
-						<input type="text" name="password" id="password" required />
-					</div>
-          
-					<input type="submit" value="Join JobMatch" class="submitRegForm">
-				</div>	
-				</form>
-
-        </div>
         
       </div>
       
