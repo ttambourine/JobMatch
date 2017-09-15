@@ -12,6 +12,8 @@
     </head>
 
 <body>
+
+	<div class="centre">
 <?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/header.php");?>
 	<div class="loginFormBox">
       
@@ -84,6 +86,7 @@
       </div><
       
 </div> 
+</div>
 		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script src="js/index.js"></script>

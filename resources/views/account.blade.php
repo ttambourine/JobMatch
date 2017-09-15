@@ -11,7 +11,9 @@
 </head>
 
 <body>
+<div class="centre">
   <?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/header.php");?>
+  
   <form action="/" method="post">
 	    
     <div class="contentformBox">	    
@@ -86,7 +88,9 @@
 	</div>
 	
 </form>	
+</div>
    		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
+		
 </body>
 </html>
   
