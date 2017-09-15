@@ -2,8 +2,6 @@
 
 use Illuminate\Http\Request;
 
-use App\Tag;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,10 +15,4 @@ use App\Tag;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
-
-Route::get('/list_tags', function() {
-	$tags = Tag::all();
-
-	return json_encode($tags);
 });
