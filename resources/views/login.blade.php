@@ -16,11 +16,7 @@
 	<div class="centre">
 <?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/header.php");?>
 	<div class="contentformBox">
-      
-		<ul class="tab-group">
-			<li class="tab active"><a href="#login">Log In</a></li>
-		</ul>
-      
+        
 		<div class="tab-content">
 			<div id="login">   
 				<h1>Welcome Back!</h1>
