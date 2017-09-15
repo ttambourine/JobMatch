@@ -92,6 +92,8 @@
 	}
 	.centre {
 		text-align:center;
+		min-height:100%; 
+		position: relative;
 	}
 
 	html {
@@ -134,6 +136,9 @@
 		color: darkgrey;
 	}
 	.footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
 		margin: 0 auto;
 		background: #4c4c4c;
 		border: 1px solid grey;
