@@ -7,12 +7,12 @@ echo"
 			<div class='leftLinks'>
 				<a href='https://laravel.com/docs' class='mainLink'>Browse Jobs</a>
 				<div class='gap'></div>
-				<a href='https://laracasts.com' class='mainLink'>Submit a Job</a>
+				<a href='/createJob' class='mainLink'>Submit a Job</a>
 			</div>
 			<div class='rightLinks'>
 				<a href='/about' class='secondLink'>Help</a>
 				<div class='gap'></div>
-				<a href='/login' class='secondLink'>Sign Up</a>
+				<a href='/login#signup' class='secondLink'>Sign Up</a>
 				<div class='gap'></div>
 				<a href='/login' class='secondLink'>Login</a>
 			</div>
