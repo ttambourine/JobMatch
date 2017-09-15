@@ -14,14 +14,14 @@ class Job extends Model {
     // applicant id = accepted applicant
 
     public function applications() {
-        return $this->hasMany('App\Applicant', 'id');
+        return $this->hasMany('App\Models\Applicant', 'id');
     }
 
     public function owner() {
-    	return $this->belongsTo('App\User', 'userid');
+    	return $this->belongsTo('App\Models\User', 'userid');
     }
 
     public function tags() {
-    	return $this->belongsTo('App\JobTags', 'id');
+    	return $this->belongsTo('App\Models\JobTags', 'id');
     }
 }

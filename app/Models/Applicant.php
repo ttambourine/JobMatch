@@ -12,10 +12,10 @@ class Applicant extends Model {
     ];
 
     public function job() {
-        return $this->belongsTo('App\Job', 'jobid');
+        return $this->belongsTo('App\Models\Job', 'jobid');
     }
 
     public function user() {
-        return $this->belongsTo('App\User', 'userid');
+        return $this->belongsTo('App\Models\User', 'userid');
     }
 }

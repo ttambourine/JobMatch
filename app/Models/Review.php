@@ -12,14 +12,14 @@ class Review extends Model {
     ];
 
     public function user() {
-        return $this->belongsTo('App\User', 'userid');
+        return $this->belongsTo('App\Models\User', 'userid');
     }
 
     public function job() {
-        return $this->belongsTo('App\Job', 'jobid');
+        return $this->belongsTo('App\Models\Job', 'jobid');
     }
 
     public function reviewer() {
-        return $this->belongsTo('App\User', 'jobowner');
+        return $this->belongsTo('App\Models\User', 'jobowner');
     }
 }

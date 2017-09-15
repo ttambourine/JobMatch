@@ -25,18 +25,18 @@ class User extends Authenticatable {
     }
 
     public function tags() { 
-        return $this->belongsTo('App\UserTag', 'id');
+        return $this->belongsTo('App\Models\UserTag', 'id');
     }
 
     public function jobs() {
-        return $this->hasMany('App\Job');
+        return $this->hasMany('App\Models\Job');
     }
 
     public function applications() {
-        return $this->hasMany('App\Applicant');
+        return $this->hasMany('App\Models\Applicant');
     }
 
     public function reviews() {
-        return $this->hasMany('App\Review');
+        return $this->hasMany('App\Models\Review');
     }
 }
