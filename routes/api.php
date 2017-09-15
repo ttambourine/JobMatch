@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/list_tags', function() {
-	$tags = Tag:all();
+	$tags = Tag::all();
 
 	return json_encode($tags);
 });
