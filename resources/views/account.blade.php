@@ -92,9 +92,9 @@
 	</div>
 	
 </form>	
-</div>
+
    		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
-		
+		</div>
 	<script>
 		$(document).ready(function(){
 			$.getJSON( "api/list_tags", function( data ) {
