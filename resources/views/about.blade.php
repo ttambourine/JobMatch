@@ -64,8 +64,8 @@
 		</div>
 		<br>
 		<br>
-		</div>
-		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
 		
+		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
+		</div>
 	</body>
 </html>
