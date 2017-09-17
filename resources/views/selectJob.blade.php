@@ -12,7 +12,7 @@
 	<form action="/" method="post">
 	    <div class="contentformBox">	    
 		<div class="contentform">
-		<h1>Create a Job</h1>	    
+		<h1>Select a Job</h1>	    
 		<div class="contentform">
 			<div class="leftcontact">
 				<div class="form-group">
@@ -30,7 +30,6 @@
 			</div>
 
 			<div class="rightcontact">	
-                <br>
                 <br>
                 <br>
 				<div class="form-group">
@@ -51,7 +50,7 @@
 			<div class="form-group">
 			</div>
 		<br>
-		<input type="submit" value="Select Job" class="submitAccForm">
+		<input type="submit" value="Job Matched!" class="submitAccForm" style="float: none">
 		<br>
 		<br>
 		</div>
