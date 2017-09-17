@@ -598,25 +598,6 @@ textarea {
 		width: 100%;
 		height: 100%;
 	}
-	.jobImg {
-		float:left;
-		display:inline-block;
-		width: 100px;
-		height: 100%;
-		background: blue;
+	.jobTab div {
+		display: inline-block;
 	}
-	.jobBody {
-		float:left;
-		display:inline-block;
-		width: 300px;
-		height: 100%;
-		background-color: red;
-	}
-	.jobEarn {
-		float:left;
-		display:inline-block;
-		width: 100px;
-		height: 100%;
-		background-color: red;
-	}
-	
