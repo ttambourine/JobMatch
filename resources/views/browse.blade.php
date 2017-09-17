@@ -17,7 +17,7 @@
 
 		<div class="jobTab">
 			<div class="jobImg">
-				<img src="https://albertaventure.com/wp-content/uploads/2014/12/01_bpoy_story01.jpg" width="68" height="68">
+				<img src="https://albertaventure.com/wp-content/uploads/2014/12/01_bpoy_story01.jpg" width="100" height="100">
 			</div>
 			<div class="jobBody">
 				<h3> Garden Landscaping </h3>

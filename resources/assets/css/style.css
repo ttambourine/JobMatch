@@ -609,11 +609,11 @@ textarea {
 		vertical-align: center;
 	}
 	.jobImg {
-		width:76px; 
+		width:103px; 
 		height: 103px;
 	}
 	.jobBody {
-		width:148px; 
+		width:400px; 
 		height: 103px;
 	}
 	.jobEarn {
