@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html >
-<head>
-    <meta charset="UTF-8">
-    <title>User Account </title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  
-	<link rel="stylesheet" type="text/css" href="../resources/assets/css/style.css">
+@extends('layout')
 
-  
-</head>
-
-<body>
-<div class="centre">
-  <?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/header.php");?>
-  
+@section('pageTitle', 'Account')
+@section('content')
   <form action="/" method="post">
 	    
     <div class="contentformBox">	    
@@ -87,10 +75,8 @@
 	</div>
 	</div>
 	
-</form>	
+	</form>
 
-   		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
-		</div>
 	<script>
 		$(document).ready(function(){
 			$.getJSON( "api/list_tags", function( data ) {
@@ -102,7 +88,4 @@
 			});
 	    }); 
 	</script>
-</body>
-</html>
-  
-   
+@stop

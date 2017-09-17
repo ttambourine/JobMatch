@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html >
-<head>
-	<meta charset="UTF-8">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   	<link rel="stylesheet" type="text/css" href="../resources/assets/css/style.css">
-  </head>
+@extends('layout')
 
-<body>  
-	<div class="centre">
-<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/header.php");?>
+@section('pageTitle', 'Select Job')
+@section('content')
 	<form action="/" method="post">
 	    <div class="contentformBox">	    
 		<div class="contentform">
@@ -57,8 +50,4 @@
 		</div>
 		</div>
 	</form>	
-
-  		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
-		</div>
-</body>
-</html>
+@stop

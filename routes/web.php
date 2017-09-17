@@ -39,16 +39,16 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/createJob', function () {
-    return view('createJob');
+Route::get('/createjob', function () {
+    return view('createjob');
 });
 
 Route::get('/browse', function () {
     return view('browse');
 });
 
-Route::get('/selectJob', function () {
-    return view('selectJob');
+Route::get('/selectjob', function () {
+    return view('selectjob');
 });
 
 //Auth::routes();
