@@ -43,12 +43,6 @@
                     <option value="" disabled="disabled" selected="selected">Please select an option</option>
                 </select>
 			</div>
-			<div class="dropdown">
-			<p>Skills<span>*</span></p>
-                <select id="tags">
-                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
-                </select>
-			</div>
 			</div>
 
 		<div class="rightcontact">	
@@ -70,6 +64,13 @@
 			</div>
 		</div>
 		<br>
+        <div class="dropdown">
+        <p>Skills<span>*</span></p>
+            <select id="tags">
+                <option value="" disabled="disabled" selected="selected">Please select an option</option>
+            </select>
+        </div>
+        
 		<div class="centreAccount">
 			<div class="form-group">
 				<p>About You<span>* 250 characters or less</span></p>
