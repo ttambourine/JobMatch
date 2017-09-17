@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('pageTitle', 'Create Job')
+@section('pageTitle', 'FAQ')
 @section('content')
 	<div class="thinBanner">
 		<img src="http://i.imgur.com/JKdd1ns.jpg" class="thinBan">
@@ -60,11 +60,11 @@
 	
 	<div class="stretch">
 		<div class="aboutButtonBox">
-			<a href="https://laravel.com/docs" class="mainLink">Tutorial</a>
+			<a href="/about" class="mainLink">About</a>
 			<div class="gap"></div>
 			|
 			<div class="gap"></div>
-			<a href="/about" class="mainLink">About</a>
+			<a href="/faq" class="mainLink">FAQ</a>
 			<div class="gap"></div>
 			|
 			<div class="gap"></div>

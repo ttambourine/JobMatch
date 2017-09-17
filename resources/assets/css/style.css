@@ -147,6 +147,7 @@
 		padding-top: 30px;
 		padding-bottom: 30px;
 		height: 120px;
+		color: grey;
 	}
 	.footer div {
 		display: inline-block;
@@ -277,7 +278,7 @@
 	}
 	div.panel {
 		margin: 0 auto;
-		width: 954px;
+		width: 600px;
 		padding-top: 20px;
 		padding-bottom: 20px;
 		background-color: white;
@@ -576,6 +577,9 @@ textarea {
 	.wideBan {
 		width: 954px;
 		height: 200px;
+	}
+	.thinBanner {
+		margin: 0 auto;
 	}
 	.quote {
 		margin: 0 auto;

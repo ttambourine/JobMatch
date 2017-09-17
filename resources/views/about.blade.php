@@ -36,7 +36,7 @@
 	<br>
 	<div class="stretch">
 		<div class="aboutButtonBox">
-			<a href="https://laravel.com/docs" class="mainLink">Tutorial</a>
+			<a href="/about" class="mainLink">About</a>
 			<div class="gap"></div>
 			|
 			<div class="gap"></div>

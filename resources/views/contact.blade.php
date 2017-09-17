@@ -31,15 +31,15 @@
 			
 	<div class="stretch">
 		<div class="aboutButtonBox">
-			<a href="https://laravel.com/docs" class="mainLink">Tutorial</a>
-			<div class="gap"></div>
-			|
-			<div class="gap"></div>
 			<a href="/about" class="mainLink">About</a>
 			<div class="gap"></div>
 			|
 			<div class="gap"></div>
 			<a href="/faq" class="mainLink">FAQ</a>
+			<div class="gap"></div>
+			|
+			<div class="gap"></div>
+			<a href="/contact" class="mainLink">Contact Us</a>
 		</div>
 	</div>
 	
