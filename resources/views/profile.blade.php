@@ -16,7 +16,7 @@
 		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/header.php");?>
 
 		<div class="thinBanner">
-			<img src="http://i.imgur.com/JKdd1ns.jpg" class="thinBan">
+			<img src="http://i.imgur.com/JKdd1ns.jpg" class="wideBan">
 		</div>
 		<div class="profileImg">
 			<img src="https://albertaventure.com/wp-content/uploads/2014/12/01_bpoy_story01.jpg" width="200" height="200" class="profileImgPic">
@@ -25,8 +25,8 @@
 			<h1>Kent Smuffman</h1>
 			<h2>Parkdale VIC 3195, Australia</h2>
 			<h3>Member since 17th Septermber 2017</h3>
-			<h4>Report this member</h4> 
-			<h5>Request a quote </h5>
+			<h5>Report this member</h5> 
+			<div class="quote">Request a quote </div>
 		</div>
 		
 		
