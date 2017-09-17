@@ -47,6 +47,10 @@ Route::get('/browse', function () {
     return view('browse');
 });
 
+Route::get('/selectJob', function () {
+    return view('browse');
+});
+
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
