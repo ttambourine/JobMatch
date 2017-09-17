@@ -19,8 +19,12 @@
 			<img src="http://i.imgur.com/JKdd1ns.jpg" class="thinBan">
 		</div>
 		<div class="profileImg">
-			<img src="https://albertaventure.com/wp-content/uploads/2014/12/01_bpoy_story01.jpg" class="profileImgPic">
+			<img src="https://albertaventure.com/wp-content/uploads/2014/12/01_bpoy_story01.jpg" width="100" height="100" class="profileImgPic">
 		</div>
+		<div class="mainProf">
+			Kent Smuffman
+		</div>
+		
 		
 		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
 	</div>	
