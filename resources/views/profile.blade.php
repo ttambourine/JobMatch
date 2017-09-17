@@ -24,10 +24,11 @@
 		<div class="mainProf">
 			<h1>Kent Smuffman</h1>
 			<div class="middleProf">
-				<h3>Parkdale VIC 3195, Australia</h3>
-				<h3>Member since 17th Septermber 2017</h3>
 				<h3>Skills: </h3>
 				<h4>Transport</h4><h4>Accounting</h4><h4>Beauty Care</h4>
+				<h3>Parkdale VIC 3195, Australia</h3>
+				<h3>Member since 17th Septermber 2017</h3>
+
 			</div>
 			<h5>Report this member</h5> 
 			<div class="quote">Request a quote </div>

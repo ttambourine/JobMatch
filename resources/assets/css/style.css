@@ -586,7 +586,7 @@ textarea {
 		margin-bottom: 60px;
 	}
 	.middleProf h4 {
-		float: left;
+		display: inline-block;
 		color: #FF4500;
 		margin-top: 20px;
 		margin-right: 20px;
