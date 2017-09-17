@@ -507,6 +507,7 @@ input {
   border-color: #FF4500;
   cursor: pointer;
   font-size: 20px;
+  display: inline;
 }
 
 .signUpForm{
