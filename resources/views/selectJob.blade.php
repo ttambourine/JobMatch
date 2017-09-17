@@ -16,8 +16,9 @@
 		<div class="contentform">
 			<div class="leftcontact">
 				<div class="form-group">
-					<p>Title</p>	
-					<input type="text" name="title" id="title" required />
+					<p>Seeker</p>	
+					<input type="img" name="seeker" id="displyimg" required />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png">
 				</div>
 				<div class="form-group">
 					<p>Expertise</p>	
@@ -25,6 +26,7 @@
 				</div>
                 <div class="form-group">
                     <p>Location</p>
+                    <input type="text" name="expertise" id="expertise" required />
                 </div>
 			</div>
 
