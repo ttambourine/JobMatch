@@ -17,7 +17,6 @@
 <?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/header.php");?>
 	<div class="contentformBox">
         
-		<div class="tab-content">
 			<div id="login">   
 				<h1>Welcome Back!</h1>
           
@@ -39,7 +38,6 @@
 				</div>
 				</div>
 				</form>
-			</div>
         
       </div>
       
