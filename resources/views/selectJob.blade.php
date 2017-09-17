@@ -18,26 +18,20 @@
                 
                 <div class="displayPic">
 					<p>Creator</p>
-                    <img src="https://www.1.fm/images/blank.jpg/10/05/22/37/blank-profile-picture-973461_960_720.png">
+                    <img src="">
                 </div>
 				<div class="form-group">
-					<p>Name</p>	
-					<input type="text" name="title" id="title" required />
+					<p>Name</p>
 				</div>
 				<div class="form-group">
 					<p>Expertise</p>	
-					<input type="text" name="expertise" id="expertise" required />
 				</div>
                 <div class="form-group">
                     <p>Location</p>
-                    <input type="text" name="location" id="location" required />
                 </div>
 			</div>
 
 			<div class="rightcontact">	
-                <div>
-					<input type="text" name="location" id="location" required />
-				</div>
 				<div class="form-group">
 					<p>Price</p>	
 					<input type="number" name="price" id="price" required />
