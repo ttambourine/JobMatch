@@ -509,6 +509,23 @@ input {
   font-size: 20px;
 }
 
+.signUpForm{
+  margin: 0 auto;
+  margin-right: 25%;
+  margin-bottom: 15px;
+  background-color: #FF4500;
+  color: #FFF;
+  text-align: center;
+  width: 50%;
+  height: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 7px 7px 7px 7px;
+  border-color: #FF4500;
+  cursor: pointer;
+  font-size: 20px;    
+}
+
 textarea {
     border-radius: 2px 2px 2px 2px;
     width: 620px;
