@@ -48,7 +48,7 @@ Route::get('/browse', function () {
 });
 
 Route::get('/selectJob', function () {
-    return view('browse');
+    return view('selectJob');
 });
 
 //Auth::routes();
