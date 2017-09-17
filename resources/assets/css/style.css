@@ -595,13 +595,17 @@ textarea {
 	
 /* browse */
 	.jobTab {
-		width: 100%;
+		margin: 0 auto;
+		width: 400px;
 		height: 101px;
-		border-bottom: 1px solid grey;
+		border: 1px solid grey;
 	}
 	.jobTab div {
 		display: inline-block;
+		border-bottom: 1px solid grey;
 	}
 	.jobBody h3, h4 {
 		margin-top: 15px;
+		text-align: left;
+		vertical-align: center;
 	}
