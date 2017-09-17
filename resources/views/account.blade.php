@@ -64,6 +64,7 @@
 			</div>
 		</div>
 		<br>
+        <br>
         <div class="dropdown">
         <p>Skills<span>*</span></p>
             <select id="tags">
