@@ -53,13 +53,6 @@
 
 		<div class="rightcontact">	
 
-			<div id="date-of-birth-input">
-				<p>Birthday<span>*</span></p>
-				<input type="number" name="date" id="date" min="1" max="31" class="numShare" name="date" placeholder="Day">
-                <input type="number" name="month" id="month" min="1" max="12" class="numShare" name="month" placeholder="Month">
-                <input type="number" name="year" id="year" class="numShare" name="year" placeholder="Year">
-			</div>	
-
 			<div class="form-group">
 				<p>Contact No.<span>*</span></p>	
 				<input type="text" name="phone" id="phone" maxlength="10" required />
