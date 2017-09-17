@@ -18,7 +18,7 @@
                 
                 <div class="displayPic">
 					<p>Creator</p>
-                    <img src="https://cdn.pixabay.com/photo/https://www.1.fm/images/blank.jpg/10/05/22/37/blank-profile-picture-973461_960_720.png">
+                    <img src="https://www.1.fm/images/blank.jpg/10/05/22/37/blank-profile-picture-973461_960_720.png">
 				<div class="form-group">
 					<p>Name</p>	
 					<input type="text" name="title" id="title" required />
