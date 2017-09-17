@@ -19,6 +19,7 @@
                 <div class="displayPic">
 					<p>Creator</p>
                     <img src="https://www.1.fm/images/blank.jpg/10/05/22/37/blank-profile-picture-973461_960_720.png">
+                </div>
 				<div class="form-group">
 					<p>Name</p>	
 					<input type="text" name="title" id="title" required />
@@ -52,8 +53,7 @@
 		</div>
 		<br>
 		<br>
-		</div>
-		</div>
+        </div>
 	</form>	
 
   		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
