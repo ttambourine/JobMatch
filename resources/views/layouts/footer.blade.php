@@ -10,12 +10,12 @@
 	</div>
 	<div class='share'>
 		<h5>Submit a Job</h5>
-		<a href='/createJob' class='footerBot'><h6>Post a Job</h6></a>
+		<a href='/createjob' class='footerBot'><h6>Post a Job</h6></a>
 	</div>
 	<div class='share'>
 		<h5>Profile</h5>
 		<h6>Profile <br>
-			<a href='/account' class='footerBot'>Preferences <br></a>
+			<a href='/register' class='footerBot'>Preferences <br></a>
 		</h6>
 	</div>
 	<div class='share'>
