@@ -35,6 +35,7 @@
 			</div>
 
 			<div class="rightcontact">	
+                <div>
 					<input type="text" name="location" id="location" required />
 				</div>
 				<div class="form-group">
@@ -49,6 +50,7 @@
 					<p>About The Job</p>	
 					<input type="text" name="about the job" id="about the job" required />
 				</div>
+            </div>
 			</div>
 		</div>
 		<br>
