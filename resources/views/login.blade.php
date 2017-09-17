@@ -35,7 +35,7 @@
 					</div>
 					<br>
 					<input type="submit" value="Get Matching" class="submitLogForm">
-                    <input type="submit" value="Sign Up Now" class="submitLogForm">
+                    <input type="submit" value="Sign Up Now" onclick="location.href='http://ec2-13-54-159-102.ap-southeast-2.compute.amazonaws.com/account';" class="submitLogForm">
 				</div>
 				</div>
 				</form>
