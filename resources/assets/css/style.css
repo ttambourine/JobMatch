@@ -570,7 +570,7 @@ textarea {
 	.quote {
 		margin: 0 auto;
 		padding: 20px;
-		width: 200px;
+		width: 300px;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		background: linear-gradient(#FF4500, #ff6a32);
@@ -581,4 +581,11 @@ textarea {
 	.middleProf {
 		margin-top: 20px;
 		margin-bottom: 20px;
+	}
+	.mainProf {
+		margin-bottom: 30px;
+		border-bottom: 1px solid grey;
+	}
+	.middleProf h4 {
+		color: #FF4500;
 	}
