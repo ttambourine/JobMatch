@@ -66,6 +66,7 @@
 		<br>
         <br>
         <div class="dropdown">
+            <br>
         <p>Skills<span>*</span></p>
             <select id="tags">
                 <option value="" disabled="disabled" selected="selected">Please select an option</option>
