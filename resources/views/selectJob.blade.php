@@ -30,6 +30,9 @@
 			</div>
 
 			<div class="rightcontact">	
+                <br>
+                <br>
+                <br>
 				<div class="form-group">
 					<p>Price</p>	
 					<input type="text" name="location" id="location" required />
