@@ -43,6 +43,10 @@ Route::get('/createJob', function () {
     return view('createJob');
 });
 
+Route::get('/browse', function () {
+    return view('browse');
+});
+
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

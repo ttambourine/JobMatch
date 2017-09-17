@@ -579,7 +579,7 @@ textarea {
 		color: white;
 	}
 	.middleProf {
-		margin-top: 20px;
+		margin-top: 5px;
 		margin-bottom: 20px;
 	}
 	.mainProf {
@@ -591,3 +591,32 @@ textarea {
 		margin-top: 20px;
 		margin-right: 20px;
 	}
+	
+	
+/* browse */
+	.jobTab {
+		width: 100%;
+		height: 100%;
+	}
+	.jobImg {
+		float:left;
+		display:inline-block;
+		width: 100px;
+		height: 100%;
+		background: blue;
+	}
+	.jobBody {
+		float:left;
+		display:inline-block;
+		width: 300px;
+		height: 100%;
+		background-color: red;
+	}
+	.jobEarn {
+		float:left;
+		display:inline-block;
+		width: 100px;
+		height: 100%;
+		background-color: red;
+	}
+	
