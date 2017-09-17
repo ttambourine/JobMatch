@@ -284,8 +284,9 @@
 		color: white;
 		padding: 12px 10px;
 		border: none;
-		border-radius: -4px;
+		border-radius: 4px;
 		cursor: pointer;
+        display: inline;
 	}
 	input[type=submit]:hover {
 		background-color: #ff6a32;
