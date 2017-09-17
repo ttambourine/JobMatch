@@ -15,7 +15,11 @@
 		width: 954px;
 		height: 175px;
 	}
-	
+    .displayPic{
+        width: 100px;
+        height: 50px;
+        float: left;
+    }
 	
 	/*keeps links in line and styles*/
 	.leftLinks {
