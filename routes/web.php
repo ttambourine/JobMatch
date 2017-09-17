@@ -11,19 +11,25 @@
 |
 */
 
-Route::get('/', function () { return view('welcome'); });
+//Route::get('/', function () { return view('welcome'); });
 Route::get('/faq', function () { return view('faq'); });
 Route::get('/contact', function () { return view('contact'); });
 Route::get('/profile', function () { return view('profile'); });
 Route::get('/about', function () { return view('about'); });
 Route::get('/account', function () { return view('account'); });
-Route::get('/login', function () { return view('login'); });
+//Route::get('/login', function () { return view('login'); });
 Route::get('/createjob', function () { return view('createjob'); });
 Route::get('/browse', function () { return view('browse'); });
 Route::get('/selectjob', function () { return view('selectjob'); });
 
-/*
+
 Route::get('/', 'HomeController@index')->name('welcome');
+
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+/*
+
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

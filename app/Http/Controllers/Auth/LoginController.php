@@ -25,11 +25,10 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
-    public function username()
-    {
-        return 'username';
+    public function showLoginForm() {
+        return view('login');
     }
 
     /**
