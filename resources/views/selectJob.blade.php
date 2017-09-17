@@ -16,10 +16,10 @@
 		<div class="contentform">
 			<div class="leftcontact">
                 
-                <div class="form-group">
+                <div class="displayPic">
 					<p>Creator</p>
                     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973461_960_720.png">
-                <div class="displayPic">
+                <div class="uploadButton">
                     <button value="upload">Select Profile Picture</button>    
                 </div>
 				<div class="form-group">
@@ -54,10 +54,7 @@
 			</div>
 		</div>
 		<br>
-		<input type="submit" value="Save Information" class="submitAccForm">
 		<br>
-		<br>
-		</div>
 		</div>
 		</div>
 	</form>	

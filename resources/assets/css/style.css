@@ -20,6 +20,9 @@
         height: 50px;
         float: left;
     }
+    .uploadButton{
+        align-content: center
+    }
 	
 	/*keeps links in line and styles*/
 	.leftLinks {
