@@ -23,13 +23,13 @@
 					<p>Expertise</p>	
 					<input type="text" name="expertise" id="expertise" required />
 				</div>
-                <div class="form-group">
-					<p>Location</p>	
-					<input type="text" name="location" id="location" required />
-				</div>
 			</div>
 
 			<div class="rightcontact">	
+				<div class="form-group">
+					<p>Location</p>	
+					<input type="text" name="location" id="location" required />
+				</div>
 				<div class="form-group">
 					<p>Price</p>	
 					<input type="number" name="price" id="price" required />
@@ -40,11 +40,17 @@
 				</div>
 			</div>
 		</div>
+				<div class="centreAccount">
+			<div class="form-group">
+				<p>About the Job<span>    250 characters or less</span></p>
+                <textarea type="text" name="about" id="about" maxlength="250" placeholder="Specifics about the job"></textarea>
 			</div>
 		<br>
-		<input type="submit" value="Select Job!" class="submitAccForm">
+		<input type="submit" value="Select Job" class="submitAccForm">
 		<br>
 		<br>
+		</div>
+		</div>
 		</div>
 	</form>	
 
