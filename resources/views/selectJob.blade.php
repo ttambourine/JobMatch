@@ -12,40 +12,40 @@
 	<form action="/" method="post">
 	    <div class="contentformBox">	    
 		<div class="contentform">
-		<h1>Select a Job</h1>	    
+		<h1>Create a Job</h1>	    
 		<div class="contentform">
-			<div class="leftcontact">	
-                <div class="creatorField">
-                    <p>Seeker: </p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" class="displayPic">
-                </div>
-				<div class="creatorField">
-					<p>Name: </p>	
+			<div class="leftcontact">
+				<div class="form-group">
+					<p>Title</p>	
+					<input type="text" name="title" id="title" required />
 				</div>
-				<div class="creatorField">
-					<p>Expertise: </p>	
+				<div class="form-group">
+					<p>Expertise</p>	
+					<input type="text" name="expertise" id="expertise" required />
 				</div>
-                <div class="creatorField">
-					<p>Location: </p>	
+                <div class="form-group">
+					<p>Location</p>	
+					<input type="text" name="location" id="location" required />
 				</div>
-            </div>
+			</div>
 
 			<div class="rightcontact">	
-				<div class="creatorField">
-					<p>Price: </p>	
+				<div class="form-group">
+					<p>Price</p>	
+					<input type="number" name="price" id="price" required />
 				</div>
-				<div class="creatorField">
-					<p>Deadline: </p>	
+				<div class="form-group">
+					<p>Deadline</p>	
+					<input type="text" name="deadline" id="deadline" required />
 				</div>
-                <div class="creatorField">
-					<p>About The Job: </p>	
-				</div>
-            </div>
 			</div>
 		</div>
+			</div>
+		<br>
+		<input type="submit" value="Select Job!" class="submitAccForm">
 		<br>
 		<br>
-        </div>
+		</div>
 	</form>	
 
   		<?php include("{$_SERVER['DOCUMENT_ROOT']}/resources/views/footer.php");?>
