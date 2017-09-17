@@ -14,27 +14,27 @@
 		<div class="contentform">
 		<h1>Select a Job</h1>	    
 		<div class="contentform">
-			<div class="rightcontact">	
+			<div class="leftcontact">	
 				<div class="form-group">
-					<p>Name</p>	
+					<p>Name: </p>	
 				</div>
 				<div class="form-group">
-					<p>Expertise</p>	
+					<p>Expertise: </p>	
 				</div>
                 <div class="form-group">
-					<p>Location</p>	
+					<p>Location: </p>	
 				</div>
             </div>
 
 			<div class="rightcontact">	
 				<div class="form-group">
-					<p>Price</p>	
+					<p>Price: </p>	
 				</div>
 				<div class="form-group">
-					<p>Deadline</p>	
+					<p>Deadline: </p>	
 				</div>
                 <div class="form-group">
-					<p>About The Job</p>	
+					<p>About The Job: </p>	
 				</div>
             </div>
 			</div>
