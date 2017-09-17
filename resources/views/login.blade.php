@@ -35,6 +35,7 @@
 					</div>
 					<br>
 					<input type="submit" value="Get Matching" class="submitLogForm">
+                    <input type="submit" value="Sign Up Now" class="submitLogForm">
 				</div>
 				</div>
 				</form>
