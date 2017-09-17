@@ -565,15 +565,20 @@ textarea {
 	}
 	.wideBan {
 		width: 954px;
-		height: 400px;
+		height: 200px;
 	}
 	.quote {
 		margin: 0 auto;
 		padding: 20px;
-		width: 100px;
+		width: 200px;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		background: linear-gradient(#FF4500, #ff6a32);
 		border-radius: 20px;
 		margin-top: 15px;
+		color: white;
+	}
+	.middleProf {
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
