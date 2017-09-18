@@ -23,7 +23,7 @@ Route::get('/browse', function () { return view('browse'); });
 Route::get('/selectjob', function () { return view('selectjob'); });
 
 Route::get('/hometest', function() { return view('home'); });
-Route::get('/', 'HomeController@index')->name('welcome');
+Route::get('/', 'WelcomeController@index')->name('welcome');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
