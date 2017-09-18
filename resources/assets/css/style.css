@@ -210,8 +210,9 @@
 		color: grey;
 		text-decoration: none;
 	}
-	.footerBot {
+	.footerBot, .footerBot:hover {
 		color: grey;
+		text-decoration: none;
 	}
 	
 	
