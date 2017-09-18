@@ -9,7 +9,7 @@
 		</h6> 
 	</div>
 	<div class='share'>
-		<a href='/createJob' class='footerTop'><h5>Submit A Job</h5></a>
+		<a href='/createjob' class='footerTop'><h5>Submit A Job</h5></a>
 		<a href='/createjob' class='footerBot'><h6>Post a Job</h6></a>
 	</div>
 	<div class='share'>
