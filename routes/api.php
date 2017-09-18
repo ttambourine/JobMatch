@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 
-use App\Models\Tag;
+use App\Tag;
 
 /*
 |--------------------------------------------------------------------------
