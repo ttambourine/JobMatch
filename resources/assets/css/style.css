@@ -26,13 +26,15 @@
 	
 	/*keeps links in line and styles*/
 	.leftLinks {
-		padding: 20px;
-		width: 300px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		background: linear-gradient(#FF4500, #ff6a32);
-		border-radius: 20px;
-		margin-top: 15px;
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(#FF4500, #ff6a32);
+    border-radius: 0px 20px 20px 0px;
+    margin-top: 15px;
+    margin-left: 100px;
 	}
 	.middleLinks {
 		margin: 0 auto;
@@ -55,11 +57,13 @@
     margin-top: 15px;
 	}
 	.rightLinks {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		border-radius: 20px;
-		width: 200px;
-		margin-top: 15px;
+	text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 240px;
 	}
 	
 	
@@ -76,21 +80,24 @@
 	
 	
 	.box {
-		padding-right: 30px;
-		padding-left: 30px;
-		width: 20;
-		padding-top: 10px;
-		margin-top: 5px;
+    float: left;
+    text-align: left;
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 100px;
+    padding-top: 7px;
+    margin-left: -30px;
 	}
 	.navBar {
-		margin: 0 auto;
-		width: 954px;
-		height: 50px;
-		text-align:center;
-		margin-bottom: 15px;
+	margin-top: 20px;
+    margin: 0 auto;
+    width: 930px;
+    height: 50px;
+    text-align: center;
 	}
 	.navBar div {
-		display: inline-block;
+    display: inline-block;
+    vertical-align: bottom;
 	}
 	.imgBan {
 		max-width: 100%;
@@ -144,7 +151,7 @@
 		margin: 0 auto;
 		background: #4c4c4c;
 		border: 1px solid grey;
-		padding-top: 30px;
+		padding-top: 22px;
 		padding-bottom: 30px;
 		height: 120px;
 		color: grey;
