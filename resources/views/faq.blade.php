@@ -2,6 +2,7 @@
 
 @section('pageTitle', 'FAQ')
 @section('content')
+	<br>
 	<div class="thinBanner">
 		<img src="http://i.imgur.com/JKdd1ns.jpg" class="thinBan">
 	</div>
