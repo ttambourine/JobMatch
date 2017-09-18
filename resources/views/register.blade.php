@@ -1,9 +1,9 @@
 @extends('layout')
 
-@section('pageTitle', 'Account')
+@section('pageTitle', 'Register')
 @section('content')
-  <form action="/" method="post">
-	    
+  <form method="POST" action="{{ route('register') }}">
+	    {{ csrf_field() }}
     <div class="contentformBox">	    
     <div class="contentform">
 		<h1>Account Details</h1>
@@ -12,12 +12,12 @@
             
             <div class="form-group">
 			<p>First Name<span>*</span></p>
-				<input type="text" name="fName" id="fName" required />
+				<input type="text" name="fname" id="fname" required />
 			</div>
             
 			<div class="form-group">
 			<p>Last Name<span>*</span></p>
-				<input type="text" name="lName" id="lName" required />
+				<input type="text" name="lname" id="lname" required />
 			</div>
 
 			<div class="text-area">
