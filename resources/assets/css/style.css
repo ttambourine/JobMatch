@@ -565,7 +565,7 @@ textarea {
 .dropdown textarea,
 .dropdown select,
 .dropdown textarea.form-control {
-    height: 25px;
+    height: 45px;
     width: 290px;
     margin: 0;
     padding: 0 20px;
