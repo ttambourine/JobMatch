@@ -206,8 +206,9 @@
 	
 	
 	/*these two stop header and footer links from being blue*/
-	.JobMatch {
-		color:grey;
+	.JobMatch, .JobMatch:hover {
+		color: grey;
+		text-decoration: none;
 	}
 	.footerBot {
 		color: grey;
