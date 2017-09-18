@@ -6,7 +6,8 @@
 		<div id="login">   
 			<h1>Welcome Back!</h1>
       
-			<form action="/" method="post">
+			<form action="/" method="POST" action="{{ route('login') }}">
+				{{ csrf_field() }}
 				<div class="logRegDes">
 					<div class="middleForm">
 						<div class="form-group">
