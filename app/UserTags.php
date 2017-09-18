@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +12,6 @@ class UserTags extends Model {
     ];
 
     public function tags() { 
-        return $this->hasMany('App\Models\Tag', 'tag');
+        return $this->hasMany('App\Tag', 'tag');
     }
 }

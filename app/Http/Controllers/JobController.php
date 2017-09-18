@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Job;
-use App\Models\JobTags;
+use App\Job;
+use App\JobTags;
 
 class JobController extends Controller
 {
