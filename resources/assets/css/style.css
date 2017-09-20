@@ -460,7 +460,8 @@ p {
     color: grey;
 }
 
-input {
+input,
+select {
 	border-radius: 5px 5px 5px 5px;
     border: 1px solid grey;
     margin-bottom: 15px;
@@ -564,6 +565,7 @@ textarea {
 .dropdown input[type="text"],
 .dropdown textarea,
 .dropdown select,
+.form-group select,
 .dropdown textarea.form-control {
     height: 45px;
     width: 290px;
