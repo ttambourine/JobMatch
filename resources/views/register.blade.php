@@ -92,7 +92,6 @@
 			});
 	    });
 
-	    <script>
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
 
@@ -169,5 +168,4 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU_2uibz4yOZXAMK4wDsTLQ3yGKD2ErLE&libraries=places&callback=initAll"
         async defer></script> 
-	</script>
 @stop
