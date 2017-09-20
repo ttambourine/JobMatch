@@ -25,11 +25,14 @@
                 <input type="email" name="email" id="email" required />
 			</div>
             <br>
-            <div class="dropdown">
-			<p>Skills<span>*</span></p>
-                <select id="tags">
-                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
-                </select>
+			<div class="form-group">
+			<p>Password<span>*</span></p>
+                <input type="password" name="password" id="password" required />
+			</div>
+			<br>
+			<div class="form-group">
+			<p>Confirm Password<span>*</span></p>
+                <input type="password" name="passwordConf" id="passwordConf" required />
 			</div>
 			</div>
 
@@ -56,6 +59,12 @@
 				<select id="tags">
                 <option value="" disabled="disabled" selected="selected">Please select an option</option>
             </select>
+			<div class="dropdown">
+			<p>Skills<span>*</span></p>
+                <select id="tags">
+                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
+                </select>
+			</div>
         </div>
 		</div>
 		<br>
