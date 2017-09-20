@@ -25,12 +25,12 @@
                 <input type="email" name="email" id="email" required />
 			</div>
             <br>
-			<div class="form-group">
+			<div class="text-area">
 			<p>Password<span>*</span></p>
                 <input type="password" name="password" id="password" required />
 			</div>
 			<br>
-			<div class="form-group">
+			<div class="text-area">
 			<p>Confirm Password<span>*</span></p>
                 <input type="password" name="passwordConf" id="passwordConf" required />
 			</div>
