@@ -18,7 +18,7 @@
 						<div class="form-group">
 							<br>
 							<p> Password <a class="forgotA" href="#">Forgot Password?</a></p>
-							<input type="text" name="password" id="password" required />
+							<input type="password" name="password" id="password" required />
 						</div>
 						<br>
 						<input type="submit" value="Get Matching" class="submitLogForm">
