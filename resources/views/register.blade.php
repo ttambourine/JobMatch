@@ -77,6 +77,7 @@
 		
 		</div>
 		
+		<input class="field" type="hidden" id="formatted_address" name="formatted_address">
 	</form>
 
 	<script>
@@ -108,11 +109,6 @@
         country: 'long_name',
         postal_code: 'short_name'
       };
-
-      function initAll() {
-      	initAutocomplete();
-      	initMap();
-      }
 
       function initAutocomplete() {
         // Create the autocomplete object, restricting the search to geographical
@@ -166,6 +162,6 @@
         }
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU_2uibz4yOZXAMK4wDsTLQ3yGKD2ErLE&libraries=places&callback=initAll"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU_2uibz4yOZXAMK4wDsTLQ3yGKD2ErLE&libraries=places&callback=initAutocomplete"
         async defer></script> 
 @stop
