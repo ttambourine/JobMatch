@@ -20,17 +20,17 @@
 				<input type="text" name="lname" id="lname" required />
 			</div>
 
-			<div class="text-area">
+			<div class="form-group">
 			<p>Email<span>*</span></p>
                 <input type="email" name="email" id="email" required />
 			</div>
             <br>
-			<div class="text-area">
+			<div class="form-group">
 			<p>Password<span>*</span></p>
                 <input type="password" name="password" id="password" required />
 			</div>
 			<br>
-			<div class="text-area">
+			<div class="form-group">
 			<p>Confirm Password<span>*</span></p>
                 <input type="password" name="passwordConf" id="passwordConf" required />
 			</div>
