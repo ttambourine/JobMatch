@@ -399,7 +399,7 @@ label.highlight {
   color: #ffffff;
 }
 
-input, textarea {
+input, textarea, select {
   font-size: 15px;
     display: block;
     width: 50%;
