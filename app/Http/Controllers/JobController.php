@@ -26,27 +26,6 @@ class JobController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'title' => 'required|string|max:255',
-            'address' => 'required|string|max:255',
-            'amount' => 'required|integer|max:20',
-            'deadline' => 'required|string|max:255',
-            'description' => 'required|string|max:250',
-            'due_date' => 'required|date',
-            //'tag1',
-            //'tag2',
-            //'tag3'
-        ]);
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -54,12 +33,22 @@ class JobController extends Controller
      */
     protected function store(Request $data)
     {
+        $this->validate( $request, [
+            'title' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'amount' => 'required|integer|max:20',
+            'deadline' => 'required|string|max:255',
+            'description' => 'required|string|max:250',
+            'due_date' => 'required|date',
+        ]);
+
+        $due_date = date('Y-m-d 23:59:59', $data['deadline']);
         return Job::create([
             'userid' => Auth::user()->getId(),
             'amount' => $data['price'],
             'description' => $data['about'],
             'title' => $data['title'],
-            'due_date' => $data['deadline'],
+            'due_date' => $due_date,
         ]);
     }
 
