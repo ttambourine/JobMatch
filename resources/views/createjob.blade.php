@@ -23,7 +23,7 @@
 						</div>
 						<div class="form-group">
 							<p>Deadline</p>	
-							<input type="text" name="deadline" id="deadline" required />
+							<input type="date" name="deadline" id="deadline" required />
 						</div>
 					</div>
 
