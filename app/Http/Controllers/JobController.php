@@ -36,7 +36,7 @@ class JobController extends Controller
         $this->validate( $data, [
             'title' => 'required|string|max:255',
             'address' => 'required|string|max:255',
-            'price' => 'required|integer|max:20',
+            'price' => 'required|integer',
             'about' => 'required|string|max:250',
             'deadline' => 'required|date',
         ]);
