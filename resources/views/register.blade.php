@@ -43,19 +43,19 @@
 					</div>
 					<div class="form-group">
 						<p>Skills 1/3<span>*</span></p>
-		                <select id="tags1">
+		                <select id="tags1" name="tag1">
 		                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
 		                </select>
 					</div>
 					<div class="form-group">
 						<p>Skills 2/3</p>
-						<select id="tags2">
+						<select id="tags2" name="tag2">
 		                <option value="" disabled="disabled" selected="selected">Please select an option</option>
 		            </select>
 					</div>
 					<div class="form-group">
 						<p>Skills 3/3</p>
-		                <select id="tags3">
+		                <select id="tags3" name="tag3">
 		                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
 		                </select>
 					</div>

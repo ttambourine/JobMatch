@@ -52,6 +52,10 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        Tag::findOrFail( $data['tag1'] );
+        if (isset($data['tag2'])) { Tag::findOrFail( $data['tag2'] ); }
+        if (isset($data['tag3'])) { Tag::findOrFail( $data['tag3'] ); }
+
         return Validator::make($data, [
             'fname' => 'required|string|max:255',
             'lname' => 'required|string|max:255',
@@ -59,6 +63,7 @@ class RegisterController extends Controller
             'address' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
+            'tag1' => 'required',
             'lat' => 'required',
             'lng' => 'required',
         ]);
@@ -72,15 +77,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        User::create([
             'fname' => $data['fname'],
             'lname' => $data['lname'],
             'mobile' => $data['mobile'],
             'address' => $data['formatted_address'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'tag1' => $data['tag1'],
+            'tag2' => $data['tag2'],
+            'tag3' => $data['tag3'],
             'lat' => $data['lat'],
             'lng' => $data['lng'],
         ]);
+
+        return redirect()->route('welcome')->with('success', 'Account created successfully.');
     }
 }
