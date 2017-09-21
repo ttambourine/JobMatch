@@ -15,7 +15,7 @@
 	<div class='share'>
 		<a href='/profile' class='footerTop'><h5>Profile</h5></a>
 		<a href='/profile' class='footerBot'><h6>Profile</a> <br>
-			<a href='/register' class='footerBot'>Preferences <br></a>
+			<a href='/preferences' class='footerBot'>Preferences <br></a>
 		</h6>
 	</div>
 	<div class='share'>
