@@ -35,7 +35,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
-Route::get('createjob', 'JobController@showCreationForm')->name('create');
+Route::get('createjob', 'JobController@showCreationForm')->name('createjob');
 Route::post('createjob', 'JobController@store');
 
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
