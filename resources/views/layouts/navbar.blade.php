@@ -11,7 +11,7 @@
 		<a href='/about' class='secondLink'>Help</a>
 		<div class='gap'></div>
 		@if (Auth::guest())
-			<a href='/login#signup' class='secondLink'>Sign Up</a>
+			<a href='/register' class='secondLink'>Sign Up</a>
 			<div class='gap'></div>
 			<a href='/login' class='secondLink'>Login</a>
 		@else
