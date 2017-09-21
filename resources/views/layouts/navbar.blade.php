@@ -10,8 +10,12 @@
 	<div class='rightLinks'>
 		<a href='/about' class='secondLink'>Help</a>
 		<div class='gap'></div>
-		<a href='/login#signup' class='secondLink'>Sign Up</a>
-		<div class='gap'></div>
-		<a href='/login' class='secondLink'>Login</a>
+		@if (Auth::guest())
+			<a href='/login#signup' class='secondLink'>Sign Up</a>
+			<div class='gap'></div>
+			<a href='/login' class='secondLink'>Login</a>
+		@else
+			<a href='/logout' class='secondLink'>Log out</a>
+		@endif
 	</div>
 </div>
