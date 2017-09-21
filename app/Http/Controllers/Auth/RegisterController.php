@@ -89,6 +89,7 @@ class RegisterController extends Controller
             'tag3' => $data['tag3'],
             'lat' => $data['lat'],
             'lng' => $data['lng'],
+            'about' => $data['about'],
         ]);
 
         return redirect()->route('welcome')->with('success', 'Account created successfully.');
