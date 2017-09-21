@@ -163,5 +163,5 @@
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU_2uibz4yOZXAMK4wDsTLQ3yGKD2ErLE&libraries=places&callback=initAutocomplete"
-        async defer></script> 
+        async defer></script>
 @stop

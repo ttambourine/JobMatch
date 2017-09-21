@@ -12,13 +12,17 @@ class User extends Authenticatable {
     protected $table = "users";
 
     protected $fillable = [
-        'fname', 'lname', 'mobile', 'address', 'email', 'password',
+        'id', 'fname', 'lname', 'mobile', 'address', 'email', 'password',
         'account_type', 'avatar'
     ];
 
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getId() {
+        return $this->id;
+    }
 
     public function fullName() {
         return $this->fname . " " . $this->lname;

@@ -19,24 +19,45 @@ class JobController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function showCreationForm()
     {
-        return view('profile');
+        return view('createjob');
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Get a validator for an incoming registration request.
      *
-     * @return \Illuminate\Http\Response
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
      */
-    public function create()
+    protected function validator(array $data)
     {
+        return Validator::make($data, [
+            'title' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'amount' => 'required|integer|max:20',
+            'deadline' => 'required|string|max:255',
+            'description' => 'required|string|max:250',
+            //'tag1',
+            //'tag2',
+            //'tag3'
+        ]);
+    }
 
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return \App\User
+     */
+    protected function create(array $data)
+    {
+        return Job::create([
+            'userid' => Auth::user()->getId(),
+            'amount' => $data['price'],
+            'description' => $data['about'],
+            'title' => $data['title'],
+        ]);
     }
 
     /**

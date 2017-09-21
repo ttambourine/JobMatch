@@ -12,13 +12,15 @@
 */
 
 //Route::get('/', function () { return view('welcome'); });
+//Route::get('/login', function () { return view('login'); });
+//Route::get('/createjob', function () { return view('createjob'); });
+
 Route::get('/faq', function () { return view('faq'); });
 Route::get('/contact', function () { return view('contact'); });
 Route::get('/profile', function () { return view('profile'); });
 Route::get('/about', function () { return view('about'); });
 Route::get('/register', function () { return view('register'); });
-//Route::get('/login', function () { return view('login'); });
-Route::get('/createjob', function () { return view('createjob'); });
+
 Route::get('/browse', function () { return view('browse'); });
 Route::get('/selectjob', function () { return view('selectjob'); });
 
@@ -32,6 +34,9 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
+
+Route::get('createjob', 'Auth\JobController@showCreationForm')->name('createjob');
+Route::post('createjob', 'Auth\JobController@create');
 
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
