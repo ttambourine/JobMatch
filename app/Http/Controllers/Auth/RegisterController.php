@@ -94,8 +94,8 @@ class RegisterController extends Controller
         if (isset($data['tag2'])) { $array['tag2'] = $data['tag2']; }
         if (isset($data['tag3'])) { $array['tag3'] = $data['tag3']; }
 
-        User::create($array);
+        return User::create($array);
 
-        return redirect()->route('welcome')->with('success', 'Account created successfully.');
+        //return redirect()->route('welcome')->with('success', 'Account created successfully.');
     }
 }
