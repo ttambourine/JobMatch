@@ -58,7 +58,7 @@
 	        <br>
 	        
 			<div class="centreAccount">
-				<div class="form-group">
+				<div class="imgSub">
 					<p>Edit your Profile Picture</p>
 					<input name="uploaded" type="file" />
 				</div>
