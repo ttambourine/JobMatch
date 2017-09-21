@@ -13,7 +13,7 @@ class User extends Authenticatable {
 
     protected $fillable = [
         'id', 'fname', 'lname', 'mobile', 'address', 'email', 'password',
-        'account_type', 'avatar'
+        'account_type', 'avatar', 'tag1', 'tag2', 'tag3'
     ];
 
     protected $hidden = [
@@ -29,7 +29,7 @@ class User extends Authenticatable {
     }
 
     public function tags() { 
-        return $this->belongsTo('App\UserTag', 'id');
+        return array($this->tag1, $this->tag2, $this->tag3);
     }
 
     public function jobs() {

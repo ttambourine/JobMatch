@@ -8,7 +8,7 @@ class Job extends Model {
     protected $table = "jobs";
 
     protected $fillable = [
-        'id', 'userid', 'description', 'amount', 'due_date', 'applicantid', 'tags'
+        'id', 'userid', 'description', 'amount', 'due_date', 'applicantid', 'tag1', 'tag2', 'tag3'
     ];
 
     // applicant id = accepted applicant
@@ -22,6 +22,6 @@ class Job extends Model {
     }
 
     public function tags() {
-    	return $this->belongsTo('App\JobTags', 'id');
+        return array($this->tag1, $this->tag2, $this->tag3);
     }
 }
