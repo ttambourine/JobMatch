@@ -78,6 +78,8 @@
 		</div>
 		
 		<input class="field" type="hidden" id="formatted_address" name="formatted_address">
+		<input class="field" type="hidden" id="lat" name="lat">
+		<input class="field" type="hidden" id="lng" name="lng">
 	</form>
 
 	<script>
@@ -142,6 +144,8 @@
         //}
 
         document.getElementById("formatted_address").value = place.formatted_address;
+        document.getElementById("lat").value = place.geometry.location.lat();
+        document.getElementById("lng").value = place.geometry.location.lng();
       }
 
       // Bias the autocomplete object to the user's geographical location,

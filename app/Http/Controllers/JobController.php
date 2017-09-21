@@ -40,6 +40,8 @@ class JobController extends Controller
             'about' => 'required|string|max:250',
             'deadline' => 'required|date',
             'tag1' => 'required',
+            'lat' => 'required',
+            'lng' => 'required',
         ]);
 
         Tag::findOrFail( $data['tag1'] );
@@ -57,7 +59,9 @@ class JobController extends Controller
             'address' => $data['address'],
             'tag1' => $data['tag1'],
             'tag2' => $data['tag2'],
-            'tag3' => $data['tag3']
+            'tag3' => $data['tag3'],
+            'lat' => $data['lat'],
+            'lng' => $data['lng'],
         ]);
 
         return redirect()->route('welcome')->with('success', 'Job ' . $data['title'] . ' created successfully.');

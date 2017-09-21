@@ -8,7 +8,8 @@ class Job extends Model {
     protected $table = "jobs";
 
     protected $fillable = [
-        'id', 'userid', 'description', 'amount', 'due_date', 'applicantid', 'tag1', 'tag2', 'tag3'
+        'id', 'userid', 'description', 'amount', 'due_date', 'applicantid',
+        'tag1', 'tag2', 'tag3', 'lat' 'lng'
     ];
 
     // applicant id = accepted applicant
