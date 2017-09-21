@@ -36,20 +36,21 @@ class JobController extends Controller
         $this->validate( $data, [
             'title' => 'required|string|max:255',
             'address' => 'required|string|max:255',
-            'amount' => 'required|integer|max:20',
-            'deadline' => 'required|string|max:255',
-            'description' => 'required|string|max:250',
-            'due_date' => 'required|date',
+            'price' => 'required|integer|max:20',
+            'about' => 'required|string|max:250',
+            'deadline' => 'required|date',
         ]);
 
         $due_date = date('Y-m-d 23:59:59', $data['deadline']);
-        return Job::create([
+        Job::create([
             'userid' => Auth::user()->getId(),
             'amount' => $data['price'],
             'description' => $data['about'],
             'title' => $data['title'],
             'due_date' => $due_date,
         ]);
+
+        return redirect()->route('home')->with('success', 'Job ' . $data['title'] . ' created successfully.');
     }
 
     /**
