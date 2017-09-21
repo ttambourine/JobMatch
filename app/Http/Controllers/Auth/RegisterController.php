@@ -78,7 +78,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        User::create([
+        $array = [
             'fname' => $data['fname'],
             'lname' => $data['lname'],
             'mobile' => $data['mobile'],
@@ -86,12 +86,15 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'tag1' => $data['tag1'],
-            'tag2' => $data['tag2'],
-            'tag3' => $data['tag3'],
             'lat' => $data['lat'],
             'lng' => $data['lng'],
             'about' => $data['about'],
-        ]);
+        ];
+
+        if (isset($data['tag2'])) { $array['tag2'] = $data['tag2']; }
+        if (isset($data['tag3'])) { $array['tag3'] = $data['tag3']; }
+
+        User::create($array);
 
         return redirect()->route('welcome')->with('success', 'Account created successfully.');
     }
