@@ -54,6 +54,7 @@ class JobController extends Controller
             'description' => $data['about'],
             'title' => $data['title'],
             'due_date' => $due_date,
+            'address' => $data['address'],
             'tag1' => $data['tag1'],
             'tag2' => $data['tag2'],
             'tag3' => $data['tag3']
