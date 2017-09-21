@@ -51,7 +51,7 @@ class JobController extends Controller
             'due_date' => $due_date,
         ]);
 
-        return redirect()->route('home')->with('success', 'Job ' . $data['title'] . ' created successfully.');
+        return redirect()->route('/home')->with('success', 'Job ' . $data['title'] . ' created successfully.');
     }
 
     /**
