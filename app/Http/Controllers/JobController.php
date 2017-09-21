@@ -43,8 +43,8 @@ class JobController extends Controller
         ]);
 
         Tag::findOrFail( $data['tag1'] );
-        if ($data['tag2']) { Tag::findOrFail( $data['tag2'] ) }
-        if ($data['tag3']) { Tag::findOrFail( $data['tag3'] ) }
+        if (isset($data['tag2'])) { Tag::findOrFail( $data['tag2'] ); }
+        if (isset($data['tag3'])) { Tag::findOrFail( $data['tag3'] ); }
 
         //$datesubmitted = date_parse_from_format( 'd-m-Y', $data['deadline'] );
         $due_date = date('Y-m-d 23:59:59', strtotime($data['deadline']));
