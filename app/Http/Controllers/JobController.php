@@ -41,8 +41,8 @@ class JobController extends Controller
             'deadline' => 'required|date',
         ]);
 
-        $datesubmitted = date_parse_from_format( 'd-m-Y', $data['deadline'] );
-        $due_date = date('Y-m-d 23:59:59', $datesubmitted);
+        //$datesubmitted = date_parse_from_format( 'd-m-Y', $data['deadline'] );
+        $due_date = date('Y-m-d 23:59:59', strtotime($data['deadline']));
         Job::create([
             'userid' => Auth::user()->getId(),
             'amount' => $data['price'],
