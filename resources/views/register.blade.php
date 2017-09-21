@@ -35,7 +35,7 @@
 				<div class="rightcontact">	
 					<div class="form-group">
 						<p>Contact No.<span>*</span></p>	
-						<input type="text" name="phone" id="phone" maxlength="10" required />
+						<input type="text" name="mobile" id="mobile" maxlength="10" required />
 					</div>
 		            <div class="form-group">
 						<p>Location<span>*</span></p>	
