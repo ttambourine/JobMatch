@@ -24,7 +24,7 @@
 	</div>
 	<div class="stretch">
 		<div class="middleLinks">
-			<a href="https://laravel.com/docs" class="mainLink">Browse All Jobs</a>
+			<a href="/browse" class="mainLink">Browse All Jobs</a>
 		</div>
 	</div>
 	<div class="stretch">
