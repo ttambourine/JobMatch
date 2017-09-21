@@ -22,8 +22,9 @@ Route::get('/createjob', function () { return view('createjob'); });
 Route::get('/browse', function () { return view('browse'); });
 Route::get('/selectjob', function () { return view('selectjob'); });
 
-Route::get('/hometest', function() { return view('home'); });
+//Route::get('/hometest', function() { return view('home'); });
 Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/home', 'HomeController@index')->name('welcome');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
