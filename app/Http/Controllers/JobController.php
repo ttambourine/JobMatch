@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use Auth;
 use App\Job;
-use App\JobTags;
+use App\Tag;
 
 class JobController extends Controller
 {
@@ -39,7 +39,12 @@ class JobController extends Controller
             'price' => 'required|integer',
             'about' => 'required|string|max:250',
             'deadline' => 'required|date',
+            'tag1' => 'required',
         ]);
+
+        Tag::findOrFail( $data['tag1'] );
+        if ($data['tag2']) { Tag::findOrFail( $data['tag2'] ) }
+        if ($data['tag3']) { Tag::findOrFail( $data['tag3'] ) }
 
         //$datesubmitted = date_parse_from_format( 'd-m-Y', $data['deadline'] );
         $due_date = date('Y-m-d 23:59:59', strtotime($data['deadline']));
@@ -49,6 +54,9 @@ class JobController extends Controller
             'description' => $data['about'],
             'title' => $data['title'],
             'due_date' => $due_date,
+            'tag1' => $data['tag1'],
+            'tag2' => $data['tag2'],
+            'tag3' => $data['tag3']
         ]);
 
         return redirect()->route('welcome')->with('success', 'Job ' . $data['title'] . ' created successfully.');
