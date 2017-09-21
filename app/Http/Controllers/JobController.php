@@ -39,6 +39,7 @@ class JobController extends Controller
             'amount' => 'required|integer|max:20',
             'deadline' => 'required|string|max:255',
             'description' => 'required|string|max:250',
+            'due_date' => 'required|date',
             //'tag1',
             //'tag2',
             //'tag3'
@@ -58,6 +59,7 @@ class JobController extends Controller
             'amount' => $data['price'],
             'description' => $data['about'],
             'title' => $data['title'],
+            'due_date' => $data['deadline'],
         ]);
     }
 

@@ -23,7 +23,7 @@
 						</div>
 						<div class="form-group">
 							<p>Deadline</p>	
-							<input type="date" name="deadline" id="deadline" required />
+							<input type="text" name="deadline" id="datepicker" required />
 						</div>
 					</div>
 
@@ -75,6 +75,8 @@
 				$("#tags2").html(listItems);
 				$("#tags3").html(listItems);
 			});
+
+    		$( "#datepicker" ).datepicker();
 	    });
 
       // This example displays an address form, using the autocomplete feature
