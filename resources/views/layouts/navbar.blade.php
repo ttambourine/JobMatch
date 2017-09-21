@@ -5,7 +5,7 @@
 	<div class='leftLinks'>
 		<a href='https://laravel.com/docs' class='mainLink'>Browse Jobs</a>
 		<div class='gap'></div>
-		<a href='/createJob' class='mainLink'>Submit a Job</a>
+		<a href='/createjob' class='mainLink'>Submit a Job</a>
 	</div>
 	<div class='rightLinks'>
 		<a href='/about' class='secondLink'>Help</a>
