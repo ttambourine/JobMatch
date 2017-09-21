@@ -19,6 +19,7 @@ Route::get('/faq', function () { return view('faq'); });
 Route::get('/contact', function () { return view('contact'); });
 Route::get('/profile', function () { return view('profile'); });
 Route::get('/about', function () { return view('about'); });
+Route::get('/preferences', function () { return view('preferences'); });
 Route::get('/register', function () { return view('register'); });
 
 Route::get('/browse', function () { return view('browse'); });
