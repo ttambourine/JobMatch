@@ -5,6 +5,7 @@
 	<div class="contentformBox">
 		<div id="login">   
 			<h1>Welcome Back!</h1>
+			<p>Not a user? <a href='/register'>Register here</a></p>
       
 			<form method="POST" action="{{ route('login') }}">
 				{{ csrf_field() }}
@@ -22,7 +23,6 @@
 						</div>
 						<br>
 						<input type="submit" value="Get Matching" class="submitLogForm">
-		                <input type="submit" value="Sign Up Now" onclick="location.href='http://ec2-13-54-159-102.ap-southeast-2.compute.amazonaws.com/register';" class="submitLogForm">
 					</div>
 				</div>
 			</form>
