@@ -45,10 +45,10 @@ class JobController extends Controller
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Store a newly created resource in storage.
      *
-     * @param  array  $data
-     * @return \App\User
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     protected function store(Request $data)
     {
@@ -58,17 +58,6 @@ class JobController extends Controller
             'description' => $data['about'],
             'title' => $data['title'],
         ]);
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-
     }
 
     /**
