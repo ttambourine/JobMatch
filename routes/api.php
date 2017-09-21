@@ -24,3 +24,9 @@ Route::get('/list_tags', function() {
 
 	return json_encode($tags);
 });
+
+Route::get('/job_info/{id}', function($id) {
+	$job = Job::findOrFail( $id );
+
+	return json_encode($job);
+});
