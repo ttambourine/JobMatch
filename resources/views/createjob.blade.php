@@ -64,6 +64,7 @@
 		<input class="field" type="hidden" id="formatted_address" name="formatted_address">
 	</form>
 
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
 		$(document).ready(function(){
 			$.getJSON( "api/list_tags", function( data ) {
