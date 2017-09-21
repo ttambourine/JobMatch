@@ -50,7 +50,7 @@ class JobController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function store(Request $data)
     {
         return Job::create([
             'userid' => Auth::user()->getId(),
