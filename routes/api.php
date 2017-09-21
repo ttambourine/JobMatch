@@ -26,6 +26,12 @@ Route::get('/list_tags', function() {
 	return json_encode($tags);
 });
 
+Route::get('/list_jobs', function() {
+	$jobs = Job::all();
+
+	return json_encode($jobs);
+});
+
 Route::get('/job_info/{id}', function($id) {
 	$job = Job::findOrFail( $id );
 
