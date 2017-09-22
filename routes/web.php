@@ -63,13 +63,13 @@ Route::get('/user_info', function() {
 		foreach($jobs as $job) {
 			$score = 0;
 
-			if ($user['tag1'] == $job['tag1'])
+			if (isset($user['tag1']) && isset($job['tag1']) && $user['tag1'] == $job['tag1'])
 				$score += 2;
 
-			if ($user['tag2'] == $job['tag2'])
+			if (isset($user['tag2']) && isset($job['tag2']) && $user['tag2'] == $job['tag2'])
 				$score += 1;
 
-			if ($user['tag3'] == $job['tag3'])
+			if (isset($user['tag3']) && isset($job['tag3']) && $user['tag3'] == $job['tag3'])
 				$score += 1;
 
 			$distance = distance($user['lat'], $user['lng'], $job['lat'], $job['lng'], 'K');
