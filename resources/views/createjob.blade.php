@@ -54,7 +54,8 @@
 		                <textarea type="text" name="about" id="about" maxlength="250" placeholder="Specifics about the job"></textarea>
 					</div>
 					<br>
-					<span>Fields with * are required</span>
+					<p class="info"> Fields with * are required</p>
+					<br>
 					<input type="submit" value="Save Information" class="submitAccForm">
 					<br>
 					<br>
