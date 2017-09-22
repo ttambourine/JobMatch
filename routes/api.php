@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 
 use App\Tag;
 use App\Job;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,12 @@ Route::get('/job_info/{id}', function($id) {
 	$job = Job::findOrFail( $id );
 
 	return json_encode($job);
+});
+
+Route::get('/user_info', function($id){
+	if(Auth::check()) {
+		$user = Auth::id();
+
+		return json_encode(User::findOrFail( $user ));
+	}
 });
