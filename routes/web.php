@@ -85,6 +85,7 @@ Route::get('/user_info', function() {
 				$score -= 2;
 
 			$jobArray['score'] = $score;
+			$jobArray['distance'] = $distance;
 			$finalJobs[$i++] = $job;
 		}
 
