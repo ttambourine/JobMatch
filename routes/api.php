@@ -18,7 +18,7 @@ use App\User;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
@@ -44,4 +44,4 @@ Route::get('/user_info', function($id){
 	$user = Auth::user()->getId();
 
 	return json_encode($user);
-})->middleware('auth:api');;
+})->middleware('api');;
