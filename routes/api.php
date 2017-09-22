@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Auth;
 use App\Tag;
 use App\Job;
 use App\User;
-use Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +40,7 @@ Route::get('/job_info/{id}', function($id) {
 	return json_encode($job);
 });
 
-Route::middleware('api')->get('/user_info', function(){
+Route::middleware('api')->middleware('web')->get('/user_info', function(){
 	$user = Auth::user()->getId();
 
 	return json_encode($user);
