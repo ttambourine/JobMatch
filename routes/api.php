@@ -41,7 +41,7 @@ Route::get('/job_info/{id}', function($id) {
 });
 
 Route::get('/user_info', function($id){
-	$user = User::findOrFail( Auth::id() );
+	$user = Auth::user()->getId();
 
 	return json_encode($user);
 })->middleware('auth:api');;
