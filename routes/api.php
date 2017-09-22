@@ -6,6 +6,8 @@ use App\Tag;
 use App\Job;
 use App\User;
 
+use Auth;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
