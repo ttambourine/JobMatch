@@ -46,14 +46,67 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
 
+
+// 
+
 // CHANGE
 Route::get('/user_info', function() {
+	use App/User;
+	use App/Tag;
+
 	if ( Auth::check() ) {
 		$user = Auth::user();
+		$jobs = Job::all();
 
-		return json_encode($user);
+		$finalJobs = array();
+		$i = 0;
+		foreach($jobs as $job) {
+			$score = 0;
+
+			if ($user['tag1'] == $job['tag1'])
+				$score += 2;
+
+			if ($user['tag2'] == $job['tag2'])
+				$score += 1;
+
+			if ($user['tag3'] == $job['tag3'])
+				$score += 1;
+
+			$distance = distance($user['lat'], $user['lng'], $job['lat'], $job['lng']], 'K');
+
+			if ($distance < 20)
+				$score += 2;
+			else if ($distance > 20 && $distance < 50)
+				$score += 1;
+			else if ($distance > 50 && $distance < 100)
+				$score += 0.5;
+			else
+				$score -= 2;
+
+			$finalJobs[$i++] = $score;
+		}
+
+		return json_encode($finalJobs);
 	}
 });
+
+function distance($lat1, $lon1, $lat2, $lon2, $unit) {
+
+  $theta = $lon1 - $lon2;
+  $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+  $dist = acos($dist);
+  $dist = rad2deg($dist);
+  $miles = $dist * 60 * 1.1515;
+  $unit = strtoupper($unit);
+
+  if ($unit == "K") {
+    return ($miles * 1.609344);
+  } else if ($unit == "N") {
+    return ($miles * 0.8684);
+  } else {
+    return $miles;
+  }
+}
 /*
 
 
