@@ -61,6 +61,7 @@ Route::get('/user_info', function() {
 		$finalJobs = array();
 		$i = 0;
 		foreach($jobs as $job) {
+			$jobArray = $job;
 			$score = 0;
 
 			if (isset($user['tag1']) && isset($job['tag1']) && $user['tag1'] == $job['tag1'])
@@ -83,7 +84,8 @@ Route::get('/user_info', function() {
 			else
 				$score -= 2;
 
-			$finalJobs[$i++] = $score;
+			$jobArray['score'] = $score;
+			$finalJobs[$i++] = $job;
 		}
 
 		return json_encode($finalJobs);
