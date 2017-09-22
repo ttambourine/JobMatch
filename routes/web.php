@@ -49,7 +49,7 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 // CHANGE
 Route::get('/user_info', function() {
 	if ( Auth::check() ) {
-		$user = Auth::user()->getId();
+		$user = Auth::user();
 
 		return json_encode($user);
 	}
