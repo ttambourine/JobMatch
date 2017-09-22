@@ -9,25 +9,25 @@
 				<h1>Account Details</h1>
 		    	<div class="leftcontact">            
 		            <div class="form-group">
-						<p>First Name<span>*</span></p>
+						<p>First Name</p>
 						<input type="text" name="fname" id="fname" required />
 					</div>
 		            
 					<div class="form-group">
-						<p>Last Name<span>*</span></p>
+						<p>Last Name</p>
 						<input type="text" name="lname" id="lname" required />
 					</div>
 
 					<div class="form-group">
-						<p>Email<span>*</span></p>
+						<p>Email</p>
 		                <input type="email" name="email" id="email" disabled />
 					</div>
 					<div class="form-group">
-						<p>Contact No.<span>*</span></p>	
+						<p>Contact No.</p>	
 						<input type="text" name="mobile" id="mobile" maxlength="10" required />
 					</div>
 		            <div class="form-group">
-						<p>Location<span>*</span></p>	
+						<p>Location</p>	
 						<input type="text" name="address" id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" required>
 					</div>
 				</div>
@@ -35,7 +35,7 @@
 				<div class="rightcontact">	
 					
 					<div class="form-group">
-						<p>Skills 1/3<span>*</span></p>
+						<p>Skills 1/3</p>
 		                <select id="tags1" name="tag1">
 		                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
 		                </select>
@@ -63,7 +63,7 @@
 					<input name="uploaded" type="file" />
 				</div>
 				<div class="form-group">
-					<p>About You<span>* 250 characters or less</span></p>
+					<p>About You<span>250 characters or less</span></p>
 	                <textarea type="text" name="about" id="about" maxlength="250" placeholder="Share your story!"></textarea>
 				</div>
 			<br>
