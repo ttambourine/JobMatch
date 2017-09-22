@@ -72,7 +72,7 @@ Route::get('/user_info', function() {
 			if ($user['tag3'] == $job['tag3'])
 				$score += 1;
 
-			$distance = distance($user['lat'], $user['lng'], $job['lat'], $job['lng']], 'K');
+			$distance = distance($user['lat'], $user['lng'], $job['lat'], $job['lng'], 'K');
 
 			if ($distance < 20)
 				$score += 2;
