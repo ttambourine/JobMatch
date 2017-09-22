@@ -58,7 +58,7 @@
 	        <br>
 	        
 			<div class="centreAccount">
-				<div class="form-group">
+				<div class="imgSub">
 					<p>Seeker</p>	
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" style="width:100px;height:100px;">
 				</div>
