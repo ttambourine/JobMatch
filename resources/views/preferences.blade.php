@@ -26,10 +26,6 @@
 						<p>Contact No.</p>	
 						<input type="text" name="mobile" id="mobile" maxlength="10" required />
 					</div>
-		            <div class="form-group">
-						<p>Location</p>	
-						<input type="text" name="address" id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" required>
-					</div>
 				</div>
 
 				<div class="rightcontact">	
@@ -51,6 +47,10 @@
 		                <select id="tags3" name="tag3">
 		                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
 		                </select>
+					</div>
+                    <div class="form-group">
+						<p>Location</p>	
+						<input type="text" name="address" id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" required>
 					</div>
 		        </div>
 			</div>
