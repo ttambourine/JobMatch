@@ -58,9 +58,9 @@
 	        <br>
 	        
 			<div class="centreAccount">
-				<div class="imgSub">
-					<p>Edit your Profile Picture</p>
-					<input name="uploaded" type="file" />
+				<div class="form-group">
+					<p>Seeker</p>	
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" style="width:100px;height:100px;">
 				</div>
 				<div class="form-group">
 					<p>About You<span>250 characters or less</span></p>
