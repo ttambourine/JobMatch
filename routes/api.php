@@ -40,8 +40,8 @@ Route::get('/job_info/{id}', function($id) {
 	return json_encode($job);
 });
 
-Route::get('/user_info', function($id){
+Route::middleware('api')->get('/user_info', function($id){
 	$user = Auth::user()->getId();
 
 	return json_encode($user);
-})->middleware('api');;
+});
