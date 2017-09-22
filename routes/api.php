@@ -44,4 +44,4 @@ Route::get('/user_info', function($id){
 	$user = User::findOrFail( Auth::id() );
 
 	return json_encode($user);
-})->middleware('auth');;
+})->middleware('auth:api');;
