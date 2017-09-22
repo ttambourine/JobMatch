@@ -50,8 +50,8 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 // 
 
 // CHANGE
-use App/User;
-use App/Tag;
+use App\User;
+use App\Tag;
 Route::get('/user_info', function() {
 
 	if ( Auth::check() ) {
