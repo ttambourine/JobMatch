@@ -3,7 +3,7 @@
 		<a href='/' class='JobMatch'><h1> JobMatch </h1></a>
 	</div>
 	<div class='leftLinks'>
-		<a href='/browse' class='mainLink'>Browse Jobs</a>
+		<a href='/selectjob' class='mainLink'>Browse Jobs</a>
 		<div class='gap'></div>
 		<a href='/createjob' class='mainLink'>Submit a Job</a>
 	</div>

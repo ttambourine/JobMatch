@@ -3,9 +3,8 @@
 		<a href='/' class='footerTop'><h5>Home</h5></a>
 	</div>
 	<div class='share'>
-		<h5>Browse Jobs</h5>
-		<h6>Your Matches <br>
-			Job Search
+		<a href='/selectjob' class='footerTop'><h5>View Matches</h5></a>
+		<a href='/selectjob' class='footerBot'><h6>Your Matches</h6></a>
 		</h6> 
 	</div>
 	<div class='share'>
