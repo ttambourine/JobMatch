@@ -627,9 +627,13 @@ textarea {
 	
 	
 /* browse */
+	.jobPic {
+		vertical-align: bottom;
+		border: none;
+	}
 	.jobTab {
 		margin: 0 auto;
-		width:100%;
+		width: 600px;
 		height: 103px;
 		border: 1px solid grey;
 	}
@@ -637,7 +641,6 @@ textarea {
 		display: inline-block;
 	}
 	.jobBody h3, h4 {
-		margin-top: 15px;
 		text-align: left;
 		vertical-align: center;
 	}
