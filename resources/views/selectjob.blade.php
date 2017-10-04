@@ -65,11 +65,22 @@
 	    }
 
 	    $.getJSON( "api/job_info/"+getUrlParameters("id"), function( data ) {
-	    	alert(data);
 			$("#title").html(data.title);
-			$("#price").html(data.amount);
-			$("#deadline").html(data.due_date);
-			$("#description").html(data.description);
+			$("#price").val(data.amount);
+			$("#deadline").val(data.due_date);
+			$("#description").val(data.description);
+
+			if (data.tag1 != 0) {
+				$("#tags").append('<p>Expertise #1</p><input type="text" name="location" id="location" value="'+data.tag1+'" disabled />');
+			}
+
+			if (data.tag2 != 0) {
+				$("#tags").append('<p>Expertise #1</p><input type="text" name="location" id="location" value="'+data.tag2+'" disabled />');
+			}
+
+			if (data.tag3 != 0) {
+				$("#tags").append('<p>Expertise #1</p><input type="text" name="location" id="location" value="'+data.tag3+'" disabled />');
+			}
 		});
 	</script>
 @stop
