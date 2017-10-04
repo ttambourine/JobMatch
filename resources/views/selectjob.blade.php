@@ -76,6 +76,7 @@
 			$("#price").val(data.amount);
 			$("#deadline").val(data.due_date);
 			$("#description").val(data.description);
+			$("#location").val(data.address);
 
 			if (data.tag1 != 0) {
 				$("#tags").append('<p>Expertise #1</p><input type="text" name="tag1" id="tag1" value="'+tag_names[data.tag1]+'" disabled />');
