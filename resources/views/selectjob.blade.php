@@ -65,7 +65,7 @@
 	    }
 
 	    $.getJSON( "api/job_info/"+getUrlParameters("id"), function( data ) {
-			$("#title").html(data.title);
+			$("#title").html("Title: " + data.title);
 			$("#price").val(data.amount);
 			$("#deadline").val(data.due_date);
 			$("#description").val(data.description);
