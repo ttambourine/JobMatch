@@ -29,7 +29,7 @@
 				</div>
 				<div class="form-group">
 					<p>Deadline</p>	
-					<input type="number" name="deadline" id="deadline" disabled />
+					<input type="text" name="deadline" id="deadline" disabled />
 				</div>
 				<div class="form-group">
 					<p>About The Job</p>	
@@ -71,15 +71,15 @@
 			$("#description").val(data.description);
 
 			if (data.tag1 != 0) {
-				$("#tags").append('<p>Expertise #1</p><input type="text" name="location" id="location" value="'+data.tag1+'" disabled />');
+				$("#tags").append('<p>Expertise #1</p><input type="text" name="tag1" id="tag1" value="'+data.tag1+'" disabled />');
 			}
 
 			if (data.tag2 != 0) {
-				$("#tags").append('<p>Expertise #1</p><input type="text" name="location" id="location" value="'+data.tag2+'" disabled />');
+				$("#tags").append('<p>Expertise #1</p><input type="text" name="tag2" id="tag2" value="'+data.tag2+'" disabled />');
 			}
 
 			if (data.tag3 != 0) {
-				$("#tags").append('<p>Expertise #1</p><input type="text" name="location" id="location" value="'+data.tag3+'" disabled />');
+				$("#tags").append('<p>Expertise #1</p><input type="text" name="tag3" id="tag3" value="'+data.tag3+'" disabled />');
 			}
 		});
 	</script>
