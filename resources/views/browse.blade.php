@@ -2,6 +2,12 @@
 
 @section('pageTitle', 'Browse')
 @section('content')
+	<p>Sort By</p>
+	<select id="sort">
+		<option value="" disabled>Sort by</option>
+		<option value="amount">Price</option>
+		<option value="distance">Distance</option>
+	</select>
 	<div id="jobs">
 		<!--<div class="jobTab">
 			<div class="jobImg">
