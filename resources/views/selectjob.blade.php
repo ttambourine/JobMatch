@@ -81,11 +81,11 @@
 				$("#tags").append('<p>Expertise #1</p><input type="text" name="tag1" id="tag1" value="'+tag_names[data.tag1]+'" disabled />');
 			}
 
-			if (data.tag2 != 0) {
+			if (data.tag2 != 0 && data.tag2 != null) {
 				$("#tags").append('<p>Expertise #2</p><input type="text" name="tag2" id="tag2" value="'+tag_names[data.tag2]+'" disabled />');
 			}
 
-			if (data.tag3 != 0) {
+			if (data.tag3 != 0 && data.tag3 != null) {
 				$("#tags").append('<p>Expertise #3</p><input type="text" name="tag3" id="tag3" value="'+tag_names[data.tag3]+'" disabled />');
 			}
 		});
