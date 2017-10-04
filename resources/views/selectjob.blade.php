@@ -53,26 +53,22 @@
 		function getUrlParameters(parameter){
 	       var currLocation = window.location.search,
 	           parArr = currLocation.split("?")[1].split("&"),
-	           returnBool = true;
 
 	       for(var i = 0; i < parArr.length; i++){
 	            parr = parArr[i].split("=");
 	            if(parr[0] == parameter){
 	                return parr[1];
-	                returnBool = true;
-	            }else{
-	                returnBool = false;            
 	            }
 	       }
 
-	       if(!returnBool) return false;  
+	       return false;  
 	    }
 
 	    $.getJSON( "api/job_info/"+getUrlParameters("id"), function( data ) {
-			$("#title") = data.title;
-			$("#price") = data.amount;
-			$("#deadline") = data.due_date;
-			$("#description") = data.description;
+			$("#title").html(data.title);
+			$("#price").html(data.amount);
+			$("#deadline").html(data.due_date);
+			$("#description").html(data.description);
 		});
 	</script>
 @stop
