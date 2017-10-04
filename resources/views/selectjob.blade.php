@@ -52,7 +52,7 @@
 	<script>
 		function getUrlParameters(parameter){
 	       var currLocation = window.location.search,
-	           parArr = currLocation.split("?")[1].split("&"),
+	           parArr = currLocation.split("?")[1].split("&");
 
 	       for(var i = 0; i < parArr.length; i++){
 	            parr = parArr[i].split("=");
