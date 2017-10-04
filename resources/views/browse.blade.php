@@ -28,8 +28,8 @@
 				<h1> $50 </h1>
 				<h4> Match </h4>
 			</div>
-		</div>
-	</div>-->
+		</div>-->
+	</div>
 	
 	<div class="bink"></div>
 
