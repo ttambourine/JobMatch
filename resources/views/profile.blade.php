@@ -6,7 +6,7 @@
 		<img src="https://albertaventure.com/wp-content/uploads/2014/12/01_bpoy_story01.jpg" width="200" height="200" class="profileImgPic">
 	</div>
 	<div class="mainProf">
-		<h1 id="name1"></h1>
+		<h1 id="name"></h1>
 		<div class="middleProf">
 			<h3>Skills: </h3>
 			<h4 id="tags1">Loading</h4><h4 id="tags2"></h4><h5 id="tags3"></h5>
