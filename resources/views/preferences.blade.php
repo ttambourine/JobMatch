@@ -40,12 +40,14 @@
 						<p>Skills 2/3</p>
 						<select id="tags2" name="tag2">
 			                <option value="" disabled="disabled" selected="selected">Please select an option</option>
+			                <option value="0">Nothing at all</option>
 			            </select>
 					</div>
 					<div class="form-group">
 						<p>Skills 3/3</p>
 		                <select id="tags3" name="tag3">
 		                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
+		                    <option value="0">Nothing at all</option>
 		                </select>
 					</div>
                     <div class="form-group">
@@ -96,6 +98,21 @@
       //  country: 'long_name',
       //  postal_code: 'short_name'
       //};
+
+      $("#tags1").check(function() {
+      	$("#tags2 option[value='"+$(this).val()+"']").remove();
+      	$("#tags3 option[value='"+$(this).val()+"']").remove();
+      });
+
+      $("#tags2").check(function() {
+      	$("#tags1 option[value='"+$(this).val()+"']").remove();
+      	$("#tags3 option[value='"+$(this).val()+"']").remove();
+      });
+
+      $("#tags3").check(function() {
+      	$("#tags1 option[value='"+$(this).val()+"']").remove();
+      	$("#tags2 option[value='"+$(this).val()+"']").remove();
+      });
 
       function initAutocomplete() {
         // Create the autocomplete object, restricting the search to geographical
