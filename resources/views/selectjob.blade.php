@@ -3,6 +3,7 @@
 @section('pageTitle', 'Select Job')
 @section('content')
 	<form action="/applyforjob" method="post">
+		{{ csrf_field() }}
 	    <div class="contentformBox">	    
 		<div class="contentform">
 		<h1 id="title">Title</h1>	    
