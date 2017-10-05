@@ -128,17 +128,17 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 		}
 		$finalJobs = json_decode(json_encode($finalJobs), True);
 		if($id == "1") {
-			print_r($finalJobs);
+			//print_r($finalJobs);
 			$finalJobs = array_sort_($finalJobs, 'amount');
-			print("\n");
-			print_r($finalJobs);
-			print("AMOUNT");
+			//print("\n");
+			//print_r($finalJobs);
+			//print("AMOUNT");
 		}else if ($id == "2") {
 			$finalJobs = array_sort_($finalJobs, 'distance');
-			print("DISTANCE");
+			//print("DISTANCE");
 		}else if ($id == "3") {
 			$finalJobs = array_sort_($finalJobs, 'score');
-			print("SCORE");
+			//print("SCORE");
 		}
 		return json_encode($finalJobs);
 	}
