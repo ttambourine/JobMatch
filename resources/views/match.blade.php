@@ -41,7 +41,7 @@
 
 	<script>
 		$(document).ready(function(){
-			$.getJSON( "api/get_matches/1", function( data ) {
+			$.getJSON( "api/get_matches/3", function( data ) {
 				for (var i = 0; i < data.length; i++){
 			 		var html = "<div class='jobTab'><a href='selectjob?id="+data[i].id+"'><div class='jobBody'><h3>"+data[i].title+"</h3><h4>Due: "+data[i].due_date+"</div><div class='jobEarn'><h1>$"+data[i].amount+"</h1></div></a></div>"
 			 		$("#jobs").append(html);
