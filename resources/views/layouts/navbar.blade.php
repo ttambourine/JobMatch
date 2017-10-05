@@ -8,8 +8,6 @@
 		<a href='/createjob' class='mainLink'>Submit a Job</a>
 	</div>
 	<div class='rightLinks'>
-		<a href='/about' class='secondLink'>Help</a>
-		<div class='gap'></div>
 		@if (Auth::guest())
 			<a href='/register' class='secondLink'>Sign Up</a>
 			<div class='gap'></div>
