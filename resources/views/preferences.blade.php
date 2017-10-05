@@ -129,15 +129,15 @@
 				$("#lng").val(data.lng);
 
 				if (data.tag1 != 0) {
-					$('#tag1 select option[value=' + data.tag1 + ']').attr('selected',true);
+					$('#tags1 select option[value=' + data.tag1 + ']').attr('selected',true);
 				}
 
 				if (data.tag2 != 0 && data.tag2 != null) {
-					$('#tag2 select option[value=' + data.tag2 + ']').attr('selected',true);
+					$('#tags2 select option[value=' + data.tag2 + ']').attr('selected',true);
 				}
 
 				if (data.tag3 != 0 && data.tag3 != null) {
-					$('#tag3 select option[value=' + data.tag3 + ']').attr('selected',true);
+					$('#tags3 select option[value=' + data.tag3 + ']').attr('selected',true);
 				}
 			});
 
