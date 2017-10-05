@@ -15,8 +15,6 @@
 			<!--<h3>Member since 17th Septermber 2017</h3>-->
 
 		</div>
-		<h5>Report this member</h5> 
-		<div class="quote">Request a quote </div>
 	</div>
 
 	<script>
