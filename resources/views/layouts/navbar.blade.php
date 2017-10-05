@@ -11,14 +11,14 @@
 		<a href='/about' class='secondLink'>Help</a>
 		<div class='gap'></div>
 		@if (Auth::guest())
-			<a href='/profile' class='secondLink'>Profile</a>
-			<div class='gap'></div>
-			<a href='/preferences' class='secondLink'>Preferences</a>
-			<div class='gap'></div>
 			<a href='/register' class='secondLink'>Sign Up</a>
 			<div class='gap'></div>
 			<a href='/login' class='secondLink'>Login</a>
 		@else
+			<a href='/profile' class='secondLink'>Profile</a>
+			<div class='gap'></div>
+			<a href='/preferences' class='secondLink'>Preferences</a>
+			<div class='gap'></div>
 			<a href='/logout' class='secondLink'>Log out</a>
 		@endif
 	</div>
