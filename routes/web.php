@@ -36,7 +36,23 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
-Route::middleware('auth')->post('update_acc', 'Auth\RegisterController@update');
+//Route::middleware('auth')->post('update_acc', 'Auth\RegisterController@update');
+Route::middleware('auth')->post('update_acc', function(Request $request){
+	$this->validate( $request, [
+        'fname' => $data['fname'],
+        'lname' => $data['lname'],
+        'mobile' => $data['mobile'],
+        'address' => $data['formatted_address'],
+        'email' => $data['email'],
+        'tag1' => $data['tag1'],
+        'lat' => $data['lat'],
+        'lng' => $data['lng'],
+        'about' => $data['about'],
+    ]);
+
+    User::find( Auth::user()->$id )->update( $request->all() );
+    return redirect()->route('preferences')->with('success', 'Data updated successfully');
+})
 
 Route::get('createjob', 'JobController@showCreationForm')->name('createjob');
 Route::post('createjob', 'JobController@store');
