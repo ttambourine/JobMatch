@@ -2,7 +2,7 @@
 
 @section('pageTitle', 'Profile')
 @section('content')
-	<br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/>
 	<div class="profileImg">
 		<img src="https://albertaventure.com/wp-content/uploads/2014/12/01_bpoy_story01.jpg" width="200" height="200" class="profileImgPic">
 	</div>
