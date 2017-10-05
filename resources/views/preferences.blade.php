@@ -100,18 +100,24 @@
       //};
 
       $("#tags1").change(function() {
-      	$("#tags2 option[value='"+$(this).val()+"']").remove();
-      	$("#tags3 option[value='"+$(this).val()+"']").remove();
+      	if ($(this).val() != 0) {
+	      	$("#tags2 option[value='"+$(this).val()+"']").remove();
+	      	$("#tags3 option[value='"+$(this).val()+"']").remove();
+	    }
       });
 
       $("#tags2").change(function() {
-      	$("#tags1 option[value='"+$(this).val()+"']").remove();
-      	$("#tags3 option[value='"+$(this).val()+"']").remove();
+      	if ($(this).val() != 0) {
+	      	$("#tags1 option[value='"+$(this).val()+"']").remove();
+	      	$("#tags3 option[value='"+$(this).val()+"']").remove();
+	    }
       });
 
       $("#tags3").change(function() {
-      	$("#tags1 option[value='"+$(this).val()+"']").remove();
-      	$("#tags2 option[value='"+$(this).val()+"']").remove();
+      	if ($(this).val() != 0) {
+	      	$("#tags1 option[value='"+$(this).val()+"']").remove();
+	      	$("#tags2 option[value='"+$(this).val()+"']").remove();
+	    }
       });
 
       function initAutocomplete() {
@@ -147,14 +153,26 @@
 
 				if (data.tag1 != 0) {
 					$('#tags1').val(data.tag1);
+					if (data.tag1 != 0) {
+						$("#tags2 option[value='"+data.tag1+"']").remove();
+	      				$("#tags3 option[value='"+data.tag1+"']").remove();
+	      			}
 				}
 
 				if (data.tag2 != 0 && data.tag2 != null) {
 					$('#tags2').val(data.tag2);
+					if (data.tag2 != 0) {
+						$("#tags1 option[value='"+data.tag2+"']").remove();
+	      				$("#tags3 option[value='"+data.tag2+"']").remove();
+	      			}
 				}
 
 				if (data.tag3 != 0 && data.tag3 != null) {
 					$('#tags3').val(data.tag3);
+					if (data.tag3 != 0) {
+						$("#tags2 option[value='"+data.tag3+"']").remove();
+	      				$("#tags1 option[value='"+data.tag3+"']").remove();
+	      			}
 				}
 			});
 
