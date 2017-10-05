@@ -124,7 +124,7 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 			$jobArray['score'] = $score;
 			$jobArray['distance'] = $distance;
 			$jobArray['distances'] = $distances; // score for distances
-			$finalJobs[$i++] = $job;
+			$finalJobs[$i++] = $jobArray;
 		}
 
 		if($id == "1") {
