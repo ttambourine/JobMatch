@@ -37,8 +37,8 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 //Route::middleware('auth')->post('update_acc', 'Auth\RegisterController@update');
-Route::middleware('auth')->post('update_acc', function(Request $request){
-	$this->validate( $request, [
+Route::middleware('auth')->post('update_acc', function(Request $data){
+	$this->validate( $data, [
         'fname' => $data['fname'],
         'lname' => $data['lname'],
         'mobile' => $data['mobile'],
@@ -50,7 +50,7 @@ Route::middleware('auth')->post('update_acc', function(Request $request){
         'about' => $data['about'],
     ]);
 
-    User::find( Auth::user()->$id )->update( $request->all() );
+    User::find( Auth::user()->$id )->update( $data->all() );
     return redirect()->route('preferences')->with('success', 'Data updated successfully');
 });
 
