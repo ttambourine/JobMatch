@@ -2,7 +2,7 @@
 
 @section('pageTitle', 'Select Job')
 @section('content')
-	<form action="/" method="post">
+	<form action="/applyforjob" method="post">
 	    <div class="contentformBox">	    
 		<div class="contentform">
 		<h1 id="title">Title</h1>	    
