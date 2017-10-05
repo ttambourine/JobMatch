@@ -99,17 +99,17 @@
       //  postal_code: 'short_name'
       //};
 
-      $("#tags1").check(function() {
+      $("#tags1").change(function() {
       	$("#tags2 option[value='"+$(this).val()+"']").remove();
       	$("#tags3 option[value='"+$(this).val()+"']").remove();
       });
 
-      $("#tags2").check(function() {
+      $("#tags2").change(function() {
       	$("#tags1 option[value='"+$(this).val()+"']").remove();
       	$("#tags3 option[value='"+$(this).val()+"']").remove();
       });
 
-      $("#tags3").check(function() {
+      $("#tags3").change(function() {
       	$("#tags1 option[value='"+$(this).val()+"']").remove();
       	$("#tags2 option[value='"+$(this).val()+"']").remove();
       });
