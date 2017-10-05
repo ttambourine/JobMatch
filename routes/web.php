@@ -22,7 +22,7 @@ Route::get('/about', function () { return view('about'); });
 Route::get('/preferences', function () { return view('preferences'); });
 Route::get('/register', function () { return view('register'); });
 
-Route::get('/browse', function () { return view('browse'); });
+Route::middleware('api')->get('/browse', function () { return view('browse'); });
 Route::get('/selectjob', function () { return view('selectjob'); });
 
 //Route::get('/hometest', function() { return view('home'); });
