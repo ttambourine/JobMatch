@@ -50,7 +50,7 @@
 
 			$('#sort').change(function() {
 				$("#jobs").html("Matching now...");
-				$.getJSON( "api/get_matches/"+$(this).value, function( data ) {
+				$.getJSON( "api/get_matches/"+$(this).val(), function( data ) {
 					$("#jobs").html("");
 					for (var i = 0; i < data.length; i++){
 				 		var html = "<div class='jobTab'><a href='selectjob?id="+data[i].id+"'><div class='jobBody'><h3>"+data[i].title+"</h3><h4>Due: "+data[i].due_date+"</div><div class='jobEarn'><h1>$"+data[i].amount+"</h1></div></a></div>"
