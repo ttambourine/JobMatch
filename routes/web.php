@@ -40,15 +40,14 @@ Route::post('register', 'Auth\RegisterController@register');
 use Illuminate\Support\Facades\Validator;
 Route::middleware('auth')->post('update_acc', function(Request $data){
 	$this->validate( $data, [
-        'fname' => $data['fname'],
-        'lname' => $data['lname'],
-        'mobile' => $data['mobile'],
-        'address' => $data['formatted_address'],
-        'email' => $data['email'],
-        'tag1' => $data['tag1'],
-        'lat' => $data['lat'],
-        'lng' => $data['lng'],
-        'about' => $data['about'],
+        'fname' => 'required|string|max:255',
+        'lname' => 'required|string|max:255',
+        'mobile' => 'required|string|max:20',
+        'address' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'tag1' => 'required',
+        'lat' => 'required',
+        'lng' => 'required',
     ]);
 
     User::find( Auth::user()->$id )->update( $data->all() );
