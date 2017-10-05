@@ -97,7 +97,7 @@
 				$("#email").val(data.email);
 				$("#about").val(data.about);
 				$("#mobile").val(data.mobile);
-				$("#location").val(data.address);
+				$("#address").val(data.address);
 
 				if (data.tag1 != 0) {
 					$('#tag1 select option[value=' + data.tag1 + ']').attr('selected',true);
