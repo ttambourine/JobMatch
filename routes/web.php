@@ -140,7 +140,13 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 			$finalJobs = array_sort_($finalJobs, 'score');
 			//print("SCORE");
 		}
-		return json_encode($finalJobs);
+
+		$finalJobs2 = array();
+		$newi = 0;
+		foreach($finalJobs as $job) {
+			$finalJobs2[$newi++] = $job;
+		}
+		return json_encode($finalJobs2);
 	}
 });
 
