@@ -29,7 +29,7 @@
 				//$("#email").val(data.email);
 				//$("#about").val(data.about);
 				//$("#mobile").val(data.mobile);
-				//$("#autocomplete").val(data.address);
+				$("#address").html(data.address);
 				//$("#lat").val(data.lat);
 				//$("#lng").val(data.lng);
 
