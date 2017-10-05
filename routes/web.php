@@ -128,11 +128,11 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 		}
 
 		if($id == 1) {
-			$finalJobs = array_sort($finalJobs, 'amount');
+			$finalJobs = array_sort_($finalJobs, 'amount');
 		}else if ($id == 2) {
-			$finalJobs = array_sort($finalJobs, 'distance');
+			$finalJobs = array_sort_($finalJobs, 'distance');
 		}else if ($id == 3) {
-			$finalJobs = array_sort($finalJobs, 'score');
+			$finalJobs = array_sort_($finalJobs, 'score');
 		}
 		return json_encode($finalJobs);
 	}
@@ -162,7 +162,7 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
   }
 }
 
-function array_sort($array, $on, $order=SORT_ASC)
+function array_sort_($array, $on, $order=SORT_ASC)
 {
     $new_array = array();
     $sortable_array = array();
