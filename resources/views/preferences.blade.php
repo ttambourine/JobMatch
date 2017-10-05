@@ -126,7 +126,7 @@
         autocomplete.addListener('place_changed', fillInAddress);
 
         $.getJSON( "api/list_tags", function( data ) {
-			 	var listItems= "<option value='' disabled selected>Please select an option</option>";
+			 	var listItems= "<option value='' disabled selected>Please select an option</option><option value='0'>Nothing at all</option>";
 				for (var i = 0; i < data.length; i++){
 					listItems+= "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
 				}
