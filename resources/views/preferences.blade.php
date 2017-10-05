@@ -98,6 +98,7 @@
 				$("#about").val(data.about);
 				$("#mobile").val(data.mobile);
 				$("#autocomplete").val(data.address);
+				fillInAddress();
 
 				if (data.tag1 != 0) {
 					$('#tag1 select option[value=' + data.tag1 + ']').attr('selected',true);
