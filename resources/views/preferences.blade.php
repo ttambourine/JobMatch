@@ -80,40 +80,6 @@
 	</form>
 
 	<script>
-		$(document).ready(function(){
-			$.getJSON( "api/list_tags", function( data ) {
-			 	var listItems= "<option value='' disabled selected>Please select an option</option>";
-				for (var i = 0; i < data.length; i++){
-					listItems+= "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
-				}
-				$("#tags1").html(listItems);
-				$("#tags2").html(listItems);
-				$("#tags3").html(listItems);
-			});
-
-			$.getJSON( "api/get_info", function( data ) {
-				$("#fname").val(data.fname);
-				$("#lname").val(data.lname);
-				$("#email").val(data.email);
-				$("#about").val(data.about);
-				$("#mobile").val(data.mobile);
-				$("#autocomplete").val(data.address);
-				fillInAddress();
-
-				if (data.tag1 != 0) {
-					$('#tag1 select option[value=' + data.tag1 + ']').attr('selected',true);
-				}
-
-				if (data.tag2 != 0 && data.tag2 != null) {
-					$('#tag2 select option[value=' + data.tag2 + ']').attr('selected',true);
-				}
-
-				if (data.tag3 != 0 && data.tag3 != null) {
-					$('#tag3 select option[value=' + data.tag3 + ']').attr('selected',true);
-				}
-			});
-	    });
-
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
 
@@ -184,6 +150,40 @@
           });
         }
       }
+
+      $(document).ready(function(){
+			$.getJSON( "api/list_tags", function( data ) {
+			 	var listItems= "<option value='' disabled selected>Please select an option</option>";
+				for (var i = 0; i < data.length; i++){
+					listItems+= "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
+				}
+				$("#tags1").html(listItems);
+				$("#tags2").html(listItems);
+				$("#tags3").html(listItems);
+			});
+
+			$.getJSON( "api/get_info", function( data ) {
+				$("#fname").val(data.fname);
+				$("#lname").val(data.lname);
+				$("#email").val(data.email);
+				$("#about").val(data.about);
+				$("#mobile").val(data.mobile);
+				$("#autocomplete").val(data.address);
+				fillInAddress();
+
+				if (data.tag1 != 0) {
+					$('#tag1 select option[value=' + data.tag1 + ']').attr('selected',true);
+				}
+
+				if (data.tag2 != 0 && data.tag2 != null) {
+					$('#tag2 select option[value=' + data.tag2 + ']').attr('selected',true);
+				}
+
+				if (data.tag3 != 0 && data.tag3 != null) {
+					$('#tag3 select option[value=' + data.tag3 + ']').attr('selected',true);
+				}
+			});
+	    });
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU_2uibz4yOZXAMK4wDsTLQ3yGKD2ErLE&libraries=places&callback=initAutocomplete"
         async defer></script>
