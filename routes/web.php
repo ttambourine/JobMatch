@@ -38,7 +38,7 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('re
 Route::post('register', 'Auth\RegisterController@register');
 //Route::middleware('auth')->post('update_acc', 'Auth\RegisterController@update');
 use Illuminate\Support\Facades\Validator;
-Route::middleware('auth')->post('update_acc', function(Request $data){
+Route::middleware('auth')->post('update_acc', function(array $data){
 	Validator::make( $data, [
         'fname' => 'required|string|max:255',
         'lname' => 'required|string|max:255',
