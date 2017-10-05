@@ -47,7 +47,7 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
-Route::middleware('auth')->get('applyforjob', function() { return view('welcome') });
+Route::middleware('auth')->get('applyforjob', function() { return view('welcome'); });
 
 // 
 
