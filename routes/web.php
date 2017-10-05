@@ -22,7 +22,7 @@ Route::get('/about', function () { return view('about'); });
 Route::middleware('auth')->get('/preferences', function () { return view('preferences'); });
 //Route::get('/register', function () { return view('register'); });
 
-Route::middleware('auth')->get('/browse', function () { return view('browse'); });
+Route::middleware('auth')->get('/browse', function () { return view('match'); });
 Route::middleware('auth')->get('/match', function () { return view('match'); });
 Route::middleware('auth')->get('/selectjob', function () { return view('selectjob'); });
 
