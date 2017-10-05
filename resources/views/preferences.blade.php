@@ -2,7 +2,7 @@
 
 @section('pageTitle', 'Account Preferences')
 @section('content')
-	<form method="POST" action="{{ route('register') }}">
+	<form method="POST" action="{{ route('register.update') }}">
 		{{ csrf_field() }}
 	    <div class="contentformBox">	    
 		    <div class="contentform">

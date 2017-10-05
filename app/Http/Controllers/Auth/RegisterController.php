@@ -98,4 +98,21 @@ class RegisterController extends Controller
 
         //return redirect()->route('welcome')->with('success', 'Account created successfully.');
     }
+
+    public function update(Request $request) {
+        $this->validate( $request, [
+            'fname' => $data['fname'],
+            'lname' => $data['lname'],
+            'mobile' => $data['mobile'],
+            'address' => $data['formatted_address'],
+            'email' => $data['email'],
+            'tag1' => $data['tag1'],
+            'lat' => $data['lat'],
+            'lng' => $data['lng'],
+            'about' => $data['about'],
+        ]);
+
+        User::find( Auth::user()->$id )->update( $request->all() );
+        return redirect()->route('preferences')->with('success', 'Data updated successfully');
+    }
 }
