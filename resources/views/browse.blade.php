@@ -8,7 +8,7 @@
 		<option value="amount">Price</option>
 		<option value="distance">Distance</option>
 	</select>-->
-	<a href='match'><button value="Match jobs"></button></a>
+	<a href='match'><button type="button">Match jobs</button></a>
 	<div id="jobs">
 		<!--<div class="jobTab">
 			<div class="jobImg">
