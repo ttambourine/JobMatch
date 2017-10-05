@@ -37,8 +37,8 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 //Route::middleware('auth')->post('update_acc', 'Auth\RegisterController@update');
+use Illuminate\Support\Facades\Validator;
 Route::middleware('auth')->post('update_acc', function(Request $data){
-	use Illuminate\Support\Facades\Validator;
 	$this->validate( $data, [
         'fname' => $data['fname'],
         'lname' => $data['lname'],
