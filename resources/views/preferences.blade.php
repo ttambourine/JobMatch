@@ -91,7 +91,7 @@
 				$("#tags3").html(listItems);
 			});
 
-			$.getJSON( "api/list_jobs", function( data ) {
+			$.getJSON( "api/get_info", function( data ) {
 				$("#fname").val(data.fname);
 				$("#lname").val(data.lname);
 				$("#email").val(data.email);
