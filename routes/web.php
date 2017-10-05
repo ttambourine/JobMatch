@@ -71,7 +71,7 @@ Route::middleware('auth')->post('update_acc', function(Request $request){
     ]);
 
     User::find( Auth::user()->id )->update( $request->all() );
-    return Route::to('preferences')->with('success', 'Data updated successfully');
+    return Redirect::to('preferences')->with('success', 'Data updated successfully');
 });
 Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 
