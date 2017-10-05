@@ -139,6 +139,8 @@
 					$('#tag3 select option[value=' + data.tag3 + ']').attr('selected',true);
 				}
 			});
+
+			fillInAddress();
       }
 
       function fillInAddress() {
