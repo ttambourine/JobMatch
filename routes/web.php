@@ -84,32 +84,56 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 		foreach($jobs as $job) {
 			$jobArray = $job;
 			$score = 0;
+			$distances = 0;
+			$tag = 0;
 
-			if (isset($user['tag1']) && isset($job['tag1']) && $user['tag1'] == $job['tag1'])
+			if (isset($user['tag1']) && isset($job['tag1']) && $user['tag1'] == $job['tag1']) {
 				$score += 2;
+				$tag = 10;
+			}
 
-			if (isset($user['tag2']) && isset($job['tag2']) && $user['tag2'] == $job['tag2'])
+			if (isset($user['tag2']) && isset($job['tag2']) && $user['tag2'] == $job['tag2']) {
 				$score += 1;
+				$tag += 5;
+			}
 
-			if (isset($user['tag3']) && isset($job['tag3']) && $user['tag3'] == $job['tag3'])
+			if (isset($user['tag3']) && isset($job['tag3']) && $user['tag3'] == $job['tag3']) {
 				$score += 1;
+				$tag += 1;
+			}
 
 			$distance = distance($user['lat'], $user['lng'], $job['lat'], $job['lng'], 'K');
 
-			if ($distance < 20)
+			if ($distance < 20) {
 				$score += 2;
-			else if ($distance > 20 && $distance < 50)
+				$distances = 10;
+			}
+			else if ($distance > 20 && $distance < 50) {
 				$score += 1;
-			else if ($distance > 50 && $distance < 100)
+				$distances = 5;
+			}
+			else if ($distance > 50 && $distance < 100) {
 				$score += 0.5;
-			else
+				$distances = 2;
+			}
+			else {
 				$score -= 2;
+				$distances = 0;
+			}
 
 			$jobArray['score'] = $score;
 			$jobArray['distance'] = $distance;
+			$jobArray['distances'] = $distances; // score for distances
 			$finalJobs[$i++] = $job;
 		}
 
+		if($id == 1) {
+			$finalJobs = array_sort($finalJobs, 'amount');
+		}else if ($id == 2) {
+			$finalJobs = array_sort($finalJobs, 'distance');
+		}else if ($id == 3) {
+			$finalJobs = array_sort($finalJobs, 'score');
+		}
 		return json_encode($finalJobs);
 	}
 });
@@ -136,6 +160,41 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
   } else {
     return $miles;
   }
+}
+
+function array_sort($array, $on, $order=SORT_ASC)
+{
+    $new_array = array();
+    $sortable_array = array();
+
+    if (count($array) > 0) {
+        foreach ($array as $k => $v) {
+            if (is_array($v)) {
+                foreach ($v as $k2 => $v2) {
+                    if ($k2 == $on) {
+                        $sortable_array[$k] = $v2;
+                    }
+                }
+            } else {
+                $sortable_array[$k] = $v;
+            }
+        }
+
+        switch ($order) {
+            case SORT_ASC:
+                asort($sortable_array);
+            break;
+            case SORT_DESC:
+                arsort($sortable_array);
+            break;
+        }
+
+        foreach ($sortable_array as $k => $v) {
+            $new_array[$k] = $array[$k];
+        }
+    }
+
+    return $new_array;
 }
 /*
 
