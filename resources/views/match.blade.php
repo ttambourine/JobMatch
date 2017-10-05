@@ -6,7 +6,7 @@
 	<select id="sort">
 		<option value="1">Price</option>
 		<option value="2">Distance</option>
-		<option value="3">Best Match</option>
+		<option value="3" selected>Best Match</option>
 	</select>
 	<div id="jobs">
 		<!--<div class="jobTab">
