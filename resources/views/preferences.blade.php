@@ -125,7 +125,8 @@
 				$("#about").val(data.about);
 				$("#mobile").val(data.mobile);
 				$("#autocomplete").val(data.address);
-				fillInAddress();
+				$("#lat").val(data.lat);
+				$("#lng").val(data.lng);
 
 				if (data.tag1 != 0) {
 					$('#tag1 select option[value=' + data.tag1 + ']').attr('selected',true);
@@ -140,7 +141,6 @@
 				}
 			});
 
-			fillInAddress();
       }
 
       function fillInAddress() {
@@ -184,10 +184,6 @@
           });
         }
       }
-
-      $(document).ready(function(){
-			fillInAddress();
-	    });
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU_2uibz4yOZXAMK4wDsTLQ3yGKD2ErLE&libraries=places&callback=initAutocomplete"
         async defer></script>
