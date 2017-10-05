@@ -1,8 +1,8 @@
 @extends('layout')
 
-@section('pageTitle', 'Register')
+@section('pageTitle', 'Account Preferences')
 @section('content')
-	<form method="POST" action="{{ route('register') }}">
+	<form method="POST" action="{{ route('preferences') }}">
 		{{ csrf_field() }}
 	    <div class="contentformBox">	    
 		    <div class="contentform">
@@ -39,8 +39,8 @@
 					<div class="form-group">
 						<p>Skills 2/3</p>
 						<select id="tags2" name="tag2">
-		                <option value="" disabled="disabled" selected="selected">Please select an option</option>
-		            </select>
+			                <option value="" disabled="disabled" selected="selected">Please select an option</option>
+			            </select>
 					</div>
 					<div class="form-group">
 						<p>Skills 3/3</p>
@@ -89,6 +89,27 @@
 				$("#tags1").html(listItems);
 				$("#tags2").html(listItems);
 				$("#tags3").html(listItems);
+			});
+
+			$.getJSON( "api/list_jobs", function( data ) {
+				$("#fname").val(data.fname);
+				$("#lname").val(data.lname);
+				$("#email").val(data.email);
+				$("#about").val(data.about);
+				$("#mobile").val(data.mobile);
+				$("#location").val(data.address);
+
+				if (data.tag1 != 0) {
+					$('#tag1 select option[value=' + data.tag1 + ']').attr('selected',true);
+				}
+
+				if (data.tag2 != 0 && data.tag2 != null) {
+					$('#tag2 select option[value=' + data.tag2 + ']').attr('selected',true);
+				}
+
+				if (data.tag3 != 0 && data.tag3 != null) {
+					$('#tag3 select option[value=' + data.tag3 + ']').attr('selected',true);
+				}
 			});
 	    });
 
