@@ -144,6 +144,7 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 		$finalJobs2 = array();
 		$newi = 0;
 		foreach($finalJobs as $job) {
+			if($job["score"] == 0) continue;
 			$finalJobs2[$newi++] = $job;
 		}
 		return json_encode($finalJobs2);
