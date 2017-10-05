@@ -129,15 +129,15 @@
 				$("#lng").val(data.lng);
 
 				if (data.tag1 != 0) {
-					$('#tags1 select option[value=' + data.tag1 + ']').attr('selected',true);
+					$('#tags1').val(data.tag1);
 				}
 
 				if (data.tag2 != 0 && data.tag2 != null) {
-					$('#tags2 select option[value=' + data.tag2 + ']').attr('selected',true);
+					$('#tags2').val(data.tag2);
 				}
 
 				if (data.tag3 != 0 && data.tag3 != null) {
-					$('#tags3 select option[value=' + data.tag3 + ']').attr('selected',true);
+					$('#tags3').val(data.tag3);
 				}
 			});
 
