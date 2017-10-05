@@ -2,12 +2,13 @@
 
 @section('pageTitle', 'Browse')
 @section('content')
-	<p>Sort By</p>
+	<!--<p>Sort By</p>
 	<select id="sort">
 		<option value="" disabled>Sort by</option>
 		<option value="amount">Price</option>
 		<option value="distance">Distance</option>
-	</select>
+	</select>-->
+	<a href='match'><button value="Match jobs"></button></a>
 	<div id="jobs">
 		<!--<div class="jobTab">
 			<div class="jobImg">

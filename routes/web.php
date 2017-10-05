@@ -17,13 +17,13 @@
 
 Route::get('/faq', function () { return view('faq'); });
 Route::get('/contact', function () { return view('contact'); });
-Route::get('/profile', function () { return view('profile'); });
+Route::middleware('auth')->get('/profile', function () { return view('profile'); });
 Route::get('/about', function () { return view('about'); });
-Route::get('/preferences', function () { return view('preferences'); });
-Route::get('/register', function () { return view('register'); });
+Route::middleware('auth')->get('/preferences', function () { return view('preferences'); });
+//Route::get('/register', function () { return view('register'); });
 
 Route::middleware('auth')->get('/browse', function () { return view('browse'); });
-Route::get('/selectjob', function () { return view('selectjob'); });
+Route::middleware('auth')->get('/selectjob', function () { return view('selectjob'); });
 
 //Route::get('/hometest', function() { return view('home'); });
 Route::get('/', 'WelcomeController@index')->name('welcome');
@@ -52,7 +52,7 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 // CHANGE
 use App\User;
 use App\Job;
-Route::get('/user_info', function() {
+Route::middleware('auth')->get('/user_info', function() {
 
 	if ( Auth::check() ) {
 		$user = Auth::user();
