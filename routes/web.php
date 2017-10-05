@@ -88,7 +88,7 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 			$tag = 0;
 
 			if (isset($user['tag1']) && isset($job['tag1']) && $user['tag1'] == $job['tag1']) {
-				$score += 2;
+				$score += 3;
 				$tag = 10;
 			}
 
@@ -117,7 +117,7 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 				$distances = 2;
 			}
 			else {
-				$score -= 2;
+				//$score -= 2;
 				$distances = 0;
 			}
 
@@ -134,7 +134,7 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 			//print_r($finalJobs);
 			//print("AMOUNT");
 		}else if ($id == "2") {
-			$finalJobs = array_sort_($finalJobs, 'distance');
+			$finalJobs = array_sort_($finalJobs, 'distance', SORT_ASC);
 			//print("DISTANCE");
 		}else if ($id == "3") {
 			$finalJobs = array_sort_($finalJobs, 'score');
