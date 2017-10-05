@@ -52,7 +52,7 @@ Route::middleware('auth')->post('update_acc', function(Request $request){
 
     User::find( Auth::user()->$id )->update( $request->all() );
     return redirect()->route('preferences')->with('success', 'Data updated successfully');
-})
+});
 
 Route::get('createjob', 'JobController@showCreationForm')->name('createjob');
 Route::post('createjob', 'JobController@store');
