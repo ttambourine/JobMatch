@@ -2,12 +2,11 @@
 
 @section('pageTitle', 'Matched Jobs')
 @section('content')
-	<!--<p>Sort By</p>
+	<p>Sort By</p>
 	<select id="sort">
-		<option value="" disabled>Sort by</option>
-		<option value="amount">Price</option>
-		<option value="distance">Distance</option>
-	</select>-->
+		<option value="1">Price</option>
+		<option value="2">Distance</option>
+	</select>
 	<div id="jobs">
 		<!--<div class="jobTab">
 			<div class="jobImg">
@@ -41,11 +40,21 @@
 
 	<script>
 		$(document).ready(function(){
-			$.getJSON( "api/list_jobs", function( data ) {
+			$.getJSON( "api/get_matches/1", function( data ) {
 				for (var i = 0; i < data.length; i++){
 			 		var html = "<div class='jobTab'><a href='selectjob?id="+data[i].id+"'><div class='jobBody'><h3>"+data[i].title+"</h3><h4>Due: "+data[i].due_date+"</div><div class='jobEarn'><h1>$"+data[i].amount+"</h1></div></a></div>"
 			 		$("#jobs").append(html);
 			 	}
+			});
+
+			$('#sort').change(function() {
+				$("#jobs").html("Loading...");
+				$.getJSON( "api/get_matches/"+$(this).value, function( data ) {
+					for (var i = 0; i < data.length; i++){
+				 		var html = "<div class='jobTab'><a href='selectjob?id="+data[i].id+"'><div class='jobBody'><h3>"+data[i].title+"</h3><h4>Due: "+data[i].due_date+"</div><div class='jobEarn'><h1>$"+data[i].amount+"</h1></div></a></div>"
+				 		$("#jobs").append(html);
+				 	}
+				});
 			});
 	    });
 	</script>
