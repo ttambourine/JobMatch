@@ -129,10 +129,13 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 
 		if($id == "1") {
 			$finalJobs = array_sort_($finalJobs, 'amount');
+			print("AMOUNT");
 		}else if ($id == "2") {
 			$finalJobs = array_sort_($finalJobs, 'distance');
+			print("DISTANCE");
 		}else if ($id == "3") {
 			$finalJobs = array_sort_($finalJobs, 'score');
+			print("SCORE");
 		}
 		return json_encode($finalJobs);
 	}
