@@ -32,7 +32,7 @@
 					
 					<div class="form-group">
 						<p>Skills 1/3</p>
-		                <select id="tags1" name="tag1">
+		                <select id="tags1" name="tag1" required="">
 		                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
 		                </select>
 					</div>
@@ -63,7 +63,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" style="width:100px;height:100px;">
 				</div>
 				<div class="form-group">
-					<p>About You<span>250 characters or less</span></p>
+					<p>About You <span>250 characters or less</span></p>
 	                <textarea type="text" name="about" id="about" maxlength="250" placeholder="Share your story!"></textarea>
 				</div>
 			<br>
@@ -97,7 +97,7 @@
 				$("#email").val(data.email);
 				$("#about").val(data.about);
 				$("#mobile").val(data.mobile);
-				$("#address").val(data.address);
+				$("#autocomplete").val(data.address);
 
 				if (data.tag1 != 0) {
 					$('#tag1 select option[value=' + data.tag1 + ']').attr('selected',true);
