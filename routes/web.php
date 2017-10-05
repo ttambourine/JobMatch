@@ -23,6 +23,7 @@ Route::middleware('auth')->get('/preferences', function () { return view('prefer
 //Route::get('/register', function () { return view('register'); });
 
 Route::middleware('auth')->get('/browse', function () { return view('browse'); });
+Route::middleware('auth')->get('/match', function () { return view('match'); });
 Route::middleware('auth')->get('/selectjob', function () { return view('selectjob'); });
 
 //Route::get('/hometest', function() { return view('home'); });
@@ -52,7 +53,7 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 // CHANGE
 use App\User;
 use App\Job;
-Route::middleware('auth')->get('/user_info', function() {
+Route::middleware('auth')->get('api/matches/{$id}', function($id) {
 
 	if ( Auth::check() ) {
 		$user = Auth::user();
