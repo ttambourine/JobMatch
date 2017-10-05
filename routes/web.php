@@ -37,6 +37,23 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 //Route::middleware('auth')->post('update_acc', 'Auth\RegisterController@update');
+
+Route::get('createjob', 'JobController@showCreationForm')->name('createjob');
+Route::post('createjob', 'JobController@store');
+
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+
+
+
+// 
+
+// CHANGE
+use App\User;
+use App\Job;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 Route::middleware('auth')->post('update_acc', function(Request $request){
@@ -56,23 +73,6 @@ Route::middleware('auth')->post('update_acc', function(Request $request){
     User::find( Auth::user()->$id )->update( $request->all() );
     return redirect()->route('preferences')->with('success', 'Data updated successfully');
 });
-
-Route::get('createjob', 'JobController@showCreationForm')->name('createjob');
-Route::post('createjob', 'JobController@store');
-
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
-
-
-
-
-// 
-
-// CHANGE
-use App\User;
-use App\Job;
 Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 
 	if ( Auth::check() ) {
