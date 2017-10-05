@@ -53,7 +53,7 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 // CHANGE
 use App\User;
 use App\Job;
-Route::middleware('auth')->get('/get_matches/{$id}', function($id) {
+Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 
 	if ( Auth::check() ) {
 		$user = Auth::user();
