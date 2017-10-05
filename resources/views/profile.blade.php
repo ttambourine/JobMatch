@@ -34,15 +34,15 @@
 				//$("#lng").val(data.lng);
 
 				if (data.tag1 != 0) {
-					$('#tags1').html(tag_name[data.tag1]);
+					$('#tags1').html(tag_names[data.tag1]);
 				}
 
 				if (data.tag2 != 0 && data.tag2 != null) {
-					$('#tags2').html(tag_name[data.tag2]);
+					$('#tags2').html(tag_names[data.tag2]);
 				}
 
 				if (data.tag3 != 0 && data.tag3 != null) {
-					$('#tags3').html(tag_name[data.tag3]);
+					$('#tags3').html(tag_names[data.tag3]);
 				}
 			});
 		});
