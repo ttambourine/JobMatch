@@ -38,7 +38,9 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('re
 Route::post('register', 'Auth\RegisterController@register');
 //Route::middleware('auth')->post('update_acc', 'Auth\RegisterController@update');
 use Illuminate\Support\Facades\Validator;
-Route::middleware('auth')->post('update_acc', function(array $data){
+Route::middleware('auth')->post('update_acc', function(Request $request){
+
+	$data = $request->input();
 	Validator::make( $data, [
         'fname' => 'required|string|max:255',
         'lname' => 'required|string|max:255',
@@ -50,7 +52,7 @@ Route::middleware('auth')->post('update_acc', function(array $data){
         'lng' => 'required',
     ]);
 
-    User::find( Auth::user()->$id )->update( $data->all() );
+    User::find( Auth::user()->$id )->update( $request->all() );
     return redirect()->route('preferences')->with('success', 'Data updated successfully');
 });
 
