@@ -94,6 +94,12 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 	}
 });
 
+Route::middleware('auth')->get('/api/get_info', function() {
+	$user = Auth::user();
+
+	return json_encode($user);
+});
+
 function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
   $theta = $lon1 - $lon2;
