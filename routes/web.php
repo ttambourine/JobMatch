@@ -104,21 +104,23 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 
 			$distance = distance($user['lat'], $user['lng'], $job['lat'], $job['lng'], 'K');
 
-			if ($distance < 20) {
-				$score += 2;
-				$distances = 10;
-			}
-			else if ($distance > 20 && $distance < 50) {
-				$score += 1;
-				$distances = 5;
-			}
-			else if ($distance > 50 && $distance < 100) {
-				$score += 0.5;
-				$distances = 2;
-			}
-			else {
-				//$score -= 2;
-				$distances = 0;
+			if($score > 0) {
+				if ($distance < 20) {
+					$score += 2;
+					$distances = 10;
+				}
+				else if ($distance > 20 && $distance < 50) {
+					$score += 1;
+					$distances = 5;
+				}
+				else if ($distance > 50 && $distance < 100) {
+					$score += 0.5;
+					$distances = 2;
+				}
+				else {
+					//$score -= 2;
+					$distances = 0;
+				}
 			}
 
 			$jobArray['score'] = $score;
