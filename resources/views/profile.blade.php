@@ -20,4 +20,8 @@
 		<h5>Report this member</h5> 
 		<div class="quote">Request a quote </div>
 	</div>
+    <div class="jobLinks">
+        <a href="postedjob.blade.php">Jobs You Have Posted</a>
+        <a href="appliedjobs.blade.php">Jobs You Have Applied For</a>
+    </div>
 @stop
