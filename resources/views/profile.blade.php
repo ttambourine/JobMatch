@@ -11,7 +11,7 @@
 		<div class="middleProf">
 			<h3>Skills: </h3>
 			<h4 id="tags1">Loading</h4><h4 id="tags2"></h4><h5 id="tags3"></h5>
-			<h3 id="address">LLOAODOADOAIDNGINGING</h3>
+			<h3 id="address">Loading......</h3>
 			<!--<h3>Member since 17th Septermber 2017</h3>-->
 
 		</div>
