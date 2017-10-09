@@ -18,6 +18,7 @@
 	</div>
     <div class="jobLinks">
         <a href="postedjob.blade.php">Jobs You Have Posted</a>
+        <br>
         <a href="appliedjobs.blade.php">Jobs You Have Applied For</a>
     </div>
 
