@@ -9,7 +9,7 @@ class Job extends Model {
 
     protected $fillable = [
         'id', 'userid', 'description', 'amount', 'due_date', 'applicantid',
-        'address', 'tag1', 'tag2', 'tag3', 'lat', 'lng'
+        'address', 'tag1', 'tag2', 'tag3', 'lat', 'lng', 'title'
     ];
 
     // applicant id = accepted applicant

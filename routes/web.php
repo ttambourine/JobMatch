@@ -17,13 +17,15 @@
 
 Route::get('/faq', function () { return view('faq'); });
 Route::get('/contact', function () { return view('contact'); });
-Route::get('/profile', function () { return view('profile'); });
+Route::middleware('auth')->get('/profile', function () { return view('profile'); });
 Route::get('/about', function () { return view('about'); });
-Route::get('/preferences', function () { return view('preferences'); });
-Route::get('/register', function () { return view('register'); });
+Route::middleware('auth')->get('/preferences', function () { return view('preferences'); });
+//Route::get('/register', function () { return view('register'); });
 
-Route::get('/browse', function () { return view('browse'); });
-Route::get('/selectjob', function () { return view('selectjob'); });
+Route::middleware('auth')->get('/browse2', function () { return view('browse'); });
+Route::middleware('auth')->get('/browse', function () { return view('match'); });
+Route::middleware('auth')->get('/match', function () { return view('match'); });
+Route::middleware('auth')->get('/selectjob', function () { return view('selectjob'); });
 
 //Route::get('/hometest', function() { return view('home'); });
 Route::get('/', 'WelcomeController@index')->name('welcome');
@@ -35,6 +37,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
+//Route::middleware('auth')->post('update_acc', 'Auth\RegisterController@update');
 
 Route::get('createjob', 'JobController@showCreationForm')->name('createjob');
 Route::post('createjob', 'JobController@store');
@@ -45,14 +48,33 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
-
+Route::middleware('auth')->post('applyforjob', function() { return view('welcome'); });
 
 // 
 
 // CHANGE
 use App\User;
 use App\Job;
-Route::get('/user_info', function() {
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+Route::middleware('auth')->post('update_acc', function(Request $request){
+
+	$data = $request->all();
+	Validator::make( $data, [
+        'fname' => 'required|string|max:255',
+        'lname' => 'required|string|max:255',
+        'mobile' => 'required|string|max:20',
+        'address' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'tag1' => 'required',
+        'lat' => 'required',
+        'lng' => 'required',
+    ]);
+
+    User::find( Auth::user()->id )->update( $request->all() );
+    return Redirect::to('preferences')->with('success', 'Data updated successfully');
+});
+Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 
 	if ( Auth::check() ) {
 		$user = Auth::user();
@@ -63,34 +85,79 @@ Route::get('/user_info', function() {
 		foreach($jobs as $job) {
 			$jobArray = $job;
 			$score = 0;
+			$distances = 0;
+			$tag = 0;
 
-			if (isset($user['tag1']) && isset($job['tag1']) && $user['tag1'] == $job['tag1'])
-				$score += 2;
+			if (isset($user['tag1']) && isset($job['tag1']) && $user['tag1'] == $job['tag1']) {
+				$score += 3;
+				$tag = 10;
+			}
 
-			if (isset($user['tag2']) && isset($job['tag2']) && $user['tag2'] == $job['tag2'])
+			if (isset($user['tag2']) && isset($job['tag2']) && $user['tag2'] == $job['tag2']) {
 				$score += 1;
+				$tag += 5;
+			}
 
-			if (isset($user['tag3']) && isset($job['tag3']) && $user['tag3'] == $job['tag3'])
+			if (isset($user['tag3']) && isset($job['tag3']) && $user['tag3'] == $job['tag3']) {
 				$score += 1;
+				$tag += 1;
+			}
 
 			$distance = distance($user['lat'], $user['lng'], $job['lat'], $job['lng'], 'K');
 
-			if ($distance < 20)
-				$score += 2;
-			else if ($distance > 20 && $distance < 50)
-				$score += 1;
-			else if ($distance > 50 && $distance < 100)
-				$score += 0.5;
-			else
-				$score -= 2;
+			if($score > 0) {
+				if ($distance < 20) {
+					$score += 2;
+					$distances = 10;
+				}
+				else if ($distance > 20 && $distance < 50) {
+					$score += 1;
+					$distances = 5;
+				}
+				else if ($distance > 50 && $distance < 100) {
+					$score += 0.5;
+					$distances = 2;
+				}
+				else {
+					//$score -= 2;
+					$distances = 0;
+				}
+			}
 
 			$jobArray['score'] = $score;
 			$jobArray['distance'] = $distance;
-			$finalJobs[$i++] = $job;
+			$jobArray['distances'] = $distances; // score for distances
+			$finalJobs[$i++] = $jobArray;
+		}
+		$finalJobs = json_decode(json_encode($finalJobs), True);
+		if($id == "1") {
+			//print_r($finalJobs);
+			$finalJobs = array_sort_($finalJobs, 'amount');
+			//print("\n");
+			//print_r($finalJobs);
+			//print("AMOUNT");
+		}else if ($id == "2") {
+			$finalJobs = array_sort_($finalJobs, 'distance', SORT_ASC);
+			//print("DISTANCE");
+		}else if ($id == "3") {
+			$finalJobs = array_sort_($finalJobs, 'score');
+			//print("SCORE");
 		}
 
-		return json_encode($finalJobs);
+		$finalJobs2 = array();
+		$newi = 0;
+		foreach($finalJobs as $job) {
+			if($job["score"] == 0) continue;
+			$finalJobs2[$newi++] = $job;
+		}
+		return json_encode($finalJobs2);
 	}
+});
+
+Route::middleware('auth')->get('/api/get_info', function() {
+	$user = Auth::user();
+
+	return json_encode($user);
 });
 
 function distance($lat1, $lon1, $lat2, $lon2, $unit) {
@@ -109,6 +176,41 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
   } else {
     return $miles;
   }
+}
+
+function array_sort_($array, $on, $order=SORT_DESC)
+{
+    $new_array = array();
+    $sortable_array = array();
+
+    if (count($array) > 0) {
+        foreach ($array as $k => $v) {
+            if (is_array($v)) {
+                foreach ($v as $k2 => $v2) {
+                    if ($k2 == $on) {
+                        $sortable_array[$k] = $v2;
+                    }
+                }
+            } else {
+                $sortable_array[$k] = $v;
+            }
+        }
+
+        switch ($order) {
+            case SORT_ASC:
+                asort($sortable_array);
+            break;
+            case SORT_DESC:
+                arsort($sortable_array);
+            break;
+        }
+
+        foreach ($sortable_array as $k => $v) {
+            $new_array[$k] = $array[$k];
+        }
+    }
+
+    return $new_array;
 }
 /*
 

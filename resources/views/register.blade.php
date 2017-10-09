@@ -43,7 +43,7 @@
 					</div>
 					<div class="form-group">
 						<p>Skills 1/3<span>*</span></p>
-		                <select id="tags1" name="tag1">
+		                <select id="tags1" name="tag1" required="">
 		                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
 		                </select>
 					</div>
@@ -66,8 +66,8 @@
 	        
 			<div class="centreAccount">
 				<div class="form-group">
-					<p>About You<span>* 250 characters or less</span></p>
-	                <textarea type="text" name="about" id="about" maxlength="250" placeholder="Share your story!"></textarea>
+					<p>About You <span>* 250 characters or less</span></p>
+	                <textarea type="text" name="about" id="about" maxlength="250" placeholder="Share your story!" required=""></textarea>
 				</div>
 			<br>
 			<input type="submit" value="Save Information" class="submitAccForm">

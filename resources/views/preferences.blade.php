@@ -1,8 +1,8 @@
 @extends('layout')
 
-@section('pageTitle', 'Register')
+@section('pageTitle', 'Account Preferences')
 @section('content')
-	<form method="POST" action="{{ route('register') }}">
+	<form method="POST" action="update_acc">
 		{{ csrf_field() }}
 	    <div class="contentformBox">	    
 		    <div class="contentform">
@@ -32,20 +32,22 @@
 					
 					<div class="form-group">
 						<p>Skills 1/3</p>
-		                <select id="tags1" name="tag1">
+		                <select id="tags1" name="tag1" required="">
 		                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
 		                </select>
 					</div>
 					<div class="form-group">
 						<p>Skills 2/3</p>
 						<select id="tags2" name="tag2">
-		                <option value="" disabled="disabled" selected="selected">Please select an option</option>
-		            </select>
+			                <option value="" disabled="disabled" selected="selected">Please select an option</option>
+			                <option value="0">Nothing at all</option>
+			            </select>
 					</div>
 					<div class="form-group">
 						<p>Skills 3/3</p>
 		                <select id="tags3" name="tag3">
 		                    <option value="" disabled="disabled" selected="selected">Please select an option</option>
+		                    <option value="0">Nothing at all</option>
 		                </select>
 					</div>
                     <div class="form-group">
@@ -63,7 +65,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" style="width:100px;height:100px;">
 				</div>
 				<div class="form-group">
-					<p>About You<span>250 characters or less</span></p>
+					<p>About You <span>250 characters or less</span></p>
 	                <textarea type="text" name="about" id="about" maxlength="250" placeholder="Share your story!"></textarea>
 				</div>
 			<br>
@@ -80,18 +82,6 @@
 	</form>
 
 	<script>
-		$(document).ready(function(){
-			$.getJSON( "api/list_tags", function( data ) {
-			 	var listItems= "<option value='' disabled selected>Please select an option</option>";
-				for (var i = 0; i < data.length; i++){
-					listItems+= "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
-				}
-				$("#tags1").html(listItems);
-				$("#tags2").html(listItems);
-				$("#tags3").html(listItems);
-			});
-	    });
-
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
 
@@ -109,6 +99,27 @@
       //  postal_code: 'short_name'
       //};
 
+      $("#tags1").change(function() {
+      	if ($(this).val() != 0) {
+	      	$("#tags2 option[value='"+$(this).val()+"']").remove();
+	      	$("#tags3 option[value='"+$(this).val()+"']").remove();
+	    }
+      });
+
+      $("#tags2").change(function() {
+      	if ($(this).val() != 0) {
+	      	$("#tags1 option[value='"+$(this).val()+"']").remove();
+	      	$("#tags3 option[value='"+$(this).val()+"']").remove();
+	    }
+      });
+
+      $("#tags3").change(function() {
+      	if ($(this).val() != 0) {
+	      	$("#tags1 option[value='"+$(this).val()+"']").remove();
+	      	$("#tags2 option[value='"+$(this).val()+"']").remove();
+	    }
+      });
+
       function initAutocomplete() {
         // Create the autocomplete object, restricting the search to geographical
         // location types.
@@ -119,6 +130,52 @@
         // When the user selects an address from the dropdown, populate the address
         // fields in the form.
         autocomplete.addListener('place_changed', fillInAddress);
+
+        $.getJSON( "api/list_tags", function( data ) {
+			 	var listItems= "<option value='' disabled selected>Please select an option</option><option value='0'>Nothing at all</option>";
+				for (var i = 0; i < data.length; i++){
+					listItems+= "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
+				}
+				$("#tags1").html(listItems);
+				$("#tags2").html(listItems);
+				$("#tags3").html(listItems);
+			});
+
+			$.getJSON( "api/get_info", function( data ) {
+				$("#fname").val(data.fname);
+				$("#lname").val(data.lname);
+				$("#email").val(data.email);
+				$("#about").val(data.about);
+				$("#mobile").val(data.mobile);
+				$("#autocomplete").val(data.address);
+				$("#lat").val(data.lat);
+				$("#lng").val(data.lng);
+
+				if (data.tag1 != 0) {
+					$('#tags1').val(data.tag1);
+					if (data.tag1 != 0) {
+						$("#tags2 option[value='"+data.tag1+"']").remove();
+	      				$("#tags3 option[value='"+data.tag1+"']").remove();
+	      			}
+				}
+
+				if (data.tag2 != 0 && data.tag2 != null) {
+					$('#tags2').val(data.tag2);
+					if (data.tag2 != 0) {
+						$("#tags1 option[value='"+data.tag2+"']").remove();
+	      				$("#tags3 option[value='"+data.tag2+"']").remove();
+	      			}
+				}
+
+				if (data.tag3 != 0 && data.tag3 != null) {
+					$('#tags3').val(data.tag3);
+					if (data.tag3 != 0) {
+						$("#tags2 option[value='"+data.tag3+"']").remove();
+	      				$("#tags1 option[value='"+data.tag3+"']").remove();
+	      			}
+				}
+			});
+
       }
 
       function fillInAddress() {
