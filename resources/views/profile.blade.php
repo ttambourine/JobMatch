@@ -16,12 +16,10 @@
 
 		</div>
 	</div>
-<<<<<<< HEAD
     <div class="jobLinks">
         <a href="postedjob.blade.php">Jobs You Have Posted</a>
         <a href="appliedjobs.blade.php">Jobs You Have Applied For</a>
     </div>
-=======
 
 	<script>
 		var tag_names = [];
@@ -52,5 +50,4 @@
 			});
 		});
 	</script>
->>>>>>> 22d51f5cbc08f6e10598105af418c735bcaf4c5b
 @stop
