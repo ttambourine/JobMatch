@@ -23,6 +23,9 @@
                     <p>Location</p>
                     <input type="text" name="location" id="location" disabled />
                 </div>
+                <div class="button-left">
+                    <img src="https://cdn0.iconfinder.com/data/icons/command-buttons/512/Left-512.png" style="width:50px;height:50px;">
+                </div>
 			</div>
 			
             <div class="rightcontact">	
@@ -41,7 +44,7 @@
 					<input type="text" name="description" id="description" disabled />
 				</div>
                 <div class="button-right">
-                <img src="https://cdn0.iconfinder.com/data/icons/command-buttons/512/Left-512.png" style="width:50px;height:50px;">
+                    <img src="https://cdn0.iconfinder.com/data/icons/command-buttons/512/Right-512.png" style="width:50px;height:50px;">
                 </div>
 			</div>
 		</div>
