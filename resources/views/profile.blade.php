@@ -14,7 +14,8 @@
 			<h3 id="address">Loading......</h3>
 			<!--<h3>Member since 17th Septermber 2017</h3>-->
             <br>
-            <h3><a href="/appliedjobs">View jobs you have applied for!</a></h3> 
+            <h3><a href="/appliedjobs">View jobs you have applied for!</a></h3>
+            <br>
             <h3><a href="/postedjobs">View jobs you have posted!</a></h3>   
 
 		</div>
