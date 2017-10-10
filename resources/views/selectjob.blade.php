@@ -14,11 +14,11 @@
                     <br>
                     <br>
                     <br>
-					<p>Seeker</p>	
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" style="width:100px;height:100px;">
                     <div class="button-left">
                         <img src="https://cdn0.iconfinder.com/data/icons/command-buttons/512/Left-512.png" style="width:50px;height:50px;">
                     </div>
+					<p>Seeker</p>	
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" style="width:100px;height:100px;">
 				</div>
 				<div class="form-group" id="tags">
 				</div>
@@ -31,13 +31,13 @@
             <div class="rightcontact">	
                 <br>
                 <br>
+                <div class="button-right">
+                    <img src="https://cdn0.iconfinder.com/data/icons/command-buttons/512/Right-512.png" style="width:50px;height:50px;">
+                </div>
 				<div class="form-group">
 					<p>Price</p>	
 					<input type="text" name="price" id="price" disabled />
 				</div>
-                <div class="button-right">
-                    <img src="https://cdn0.iconfinder.com/data/icons/command-buttons/512/Right-512.png" style="width:50px;height:50px;">
-                </div>
 				<div class="form-group">
 					<p>Deadline</p>	
 					<input type="text" name="deadline" id="deadline" disabled />
