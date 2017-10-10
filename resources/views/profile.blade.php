@@ -46,4 +46,5 @@
 			});
 		});
 	</script>
+    <a href="appliedjobs.blade.php">View jobs you have applied for!</a> &nbsp; &nbsp;| <a href="postedjobs.blade.php">View jobs you have posted!</a>
 @stop

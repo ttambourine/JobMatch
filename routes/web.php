@@ -26,6 +26,8 @@ Route::middleware('auth')->get('/browse2', function () { return view('browse'); 
 Route::middleware('auth')->get('/browse', function () { return view('match'); });
 Route::middleware('auth')->get('/match', function () { return view('match'); });
 Route::middleware('auth')->get('/selectjob', function () { return view('selectjob'); });
+Route::middleware('auth')->get('/appliedjobs', function () { return view('appliedjobs'); });
+Route::middleware('auth')->get('/postedjobs', function () { return view('postedjobs'); });
 
 //Route::get('/hometest', function() { return view('home'); });
 Route::get('/', 'WelcomeController@index')->name('welcome');
