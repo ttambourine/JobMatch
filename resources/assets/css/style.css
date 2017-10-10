@@ -668,10 +668,8 @@ textarea {
 
 /*navigation buttons*/
 .button-right {
-    float: right;
     position: absolute;
 }
 .button-left {
-    float: left;
     position: absolute;
 }
