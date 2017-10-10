@@ -13,6 +13,8 @@
 			<h4 id="tags1">Loading</h4><h4 id="tags2"></h4><h5 id="tags3"></h5>
 			<h3 id="address">Loading......</h3>
 			<!--<h3>Member since 17th Septermber 2017</h3>-->
+            <h3><a href="/appliedjobs">View jobs you have applied for!</a></h3> 
+            <h3><a href="/postedjobs">View jobs you have posted!</a></h3>   
 
 		</div>
 	</div>
@@ -46,6 +48,4 @@
 			});
 		});
 	</script>
-<h3><a href="/appliedjobs">View jobs you have applied for!</a></h3> 
-<h3><a href="/postedjobs">View jobs you have posted!</a></h3>
 @stop
