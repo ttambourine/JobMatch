@@ -10,6 +10,9 @@
 		<div class="contentform">
 			<div class="leftcontact">
 				<div class="form-group">
+                    <br>
+                    <br>
+                    <br>
 					<p>Seeker</p>	
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" style="width:100px;height:100px;">
 				</div>
