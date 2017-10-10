@@ -24,9 +24,15 @@
                     <input type="text" name="location" id="location" disabled />
                 </div>
 			</div>
+            
+            <div class="button-right">
             <img src="https://cdn0.iconfinder.com/data/icons/command-buttons/512/Left-512.png" style="width:50px;height:50px;">
+            </div>
+            <div class="button-left">
             <img src="https://cdn0.iconfinder.com/data/icons/command-buttons/512/Right-512.png" style="width:50px;height:50px;">
-			<div class="rightcontact">	
+            </div>
+			
+            <div class="rightcontact">	
                 <br>
                 <br>
 				<div class="form-group">

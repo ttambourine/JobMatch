@@ -665,3 +665,15 @@ textarea {
 	.info {
 		color: #FF4500;
 	}
+
+/*navigation buttons*/
+.button-right {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.button-left {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
