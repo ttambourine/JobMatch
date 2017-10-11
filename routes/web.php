@@ -50,15 +50,33 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
-Route::middleware('auth')->post('applyforjob', function() { return view('welcome'); });
-
 // 
 
 // CHANGE
 use App\User;
+use App\Applicant;
 use App\Job;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+
+Route::middleware('auth')->post('applyforjob', function(Request $request) {
+	$data = $request->all();
+	$id = $data['id'];
+	//return view('welcome'); 
+	$user = Auth::user();
+	$job = Job::findOrFail( $id );
+
+	$userApps = $user->applications();
+	foreach($userApps as $app) {
+		if ($app->jobid == $id) {
+			return Redirect::to('welcome')->with('success', 'Duplicate application');
+		}
+	}
+
+	Applicant::create( array( "userid" => $user->id, "jobid" => $id, "status" => "Pending" ) );
+	return Redirect::to('welcome')->with('success', 'Application sent through');
+});
+
 Route::middleware('auth')->post('update_acc', function(Request $request){
 
 	$data = $request->all();
@@ -76,6 +94,19 @@ Route::middleware('auth')->post('update_acc', function(Request $request){
     User::find( Auth::user()->id )->update( $request->all() );
     return Redirect::to('preferences')->with('success', 'Data updated successfully');
 });
+
+Route::middleware('auth')->get('/api/get_applications', function() {
+	$user = Auth::user();
+
+	return json_encode($user->applications());
+});
+
+Route::middleware('auth')->get('/api/get_reviews', function() {
+	$user = Auth::user();
+
+	return json_encode($user->reviews());
+});
+
 Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 
 	if ( Auth::check() ) {

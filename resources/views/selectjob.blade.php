@@ -53,6 +53,7 @@
 			</div>
 		<br>
 		<input type="submit" value="Apply for job" class="submitAccForm" style="float: none">
+		<input type="text" name="id" id="id" />
 		<br>
 		<br>
 		</div>
@@ -75,6 +76,8 @@
 
 	       return false;  
 	    }
+
+	    $("#id").val(getUrlParameters("id"));
 
 	    var tag_names = [];
 	    $.getJSON( "api/list_tags", function( data ) {
