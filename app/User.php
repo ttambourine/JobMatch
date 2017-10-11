@@ -33,14 +33,14 @@ class User extends Authenticatable {
     }
 
     public function jobs() {
-        return $this->hasMany('App\Job');
+        return $this->hasMany('App\Job', 'userid');
     }
 
     public function applications() {
-        return $this->hasMany('App\Applicant');
+        return $this->hasMany('App\Applicant', 'userid');
     }
 
     public function reviews() {
-        return $this->hasMany('App\Review');
+        return $this->hasMany('App\Review', 'userid');
     }
 }
