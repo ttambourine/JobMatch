@@ -117,6 +117,12 @@ Route::middleware('auth')->get('/api/get_myjobs', function() {
 	return json_encode($user->jobs);
 });
 
+Route::middleware('auth')->get('/api/get_jobapplications/{id}', function($id) {
+	$job = Job::findOrFail( $id );
+
+	return json_encode($job->applications);
+});
+
 Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 
 	if ( Auth::check() ) {
