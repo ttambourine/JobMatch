@@ -70,15 +70,15 @@ Route::middleware('auth')->post('applyforjob', function(Request $request) {
 	//print_r($userApps);
 	foreach($userApps as $app) {
 		if ($app->jobid == $id) {
-			echo "Fail";
-			//return Redirect::to('/')->with('success', 'Duplicate application');
+			//echo "Fail";
+			return Redirect::to('/')->with('success', 'Duplicate application');
 		}
 	}
 
 	$array = array( "userid" => $user->id, "jobid" => $id, "status" => "Pending" );
-	print_r($array);
+	//print_r($array);
 	Applicant::create( $array );
-	//return Redirect::to('/home')->with('success', 'Application sent through');
+	return Redirect::to('/home')->with('success', 'Application sent through');
 });
 
 Route::middleware('auth')->post('update_acc', function(Request $request){
