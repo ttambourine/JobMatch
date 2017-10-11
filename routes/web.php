@@ -102,19 +102,19 @@ Route::middleware('auth')->post('update_acc', function(Request $request){
 Route::middleware('auth')->get('/api/get_applications', function() {
 	$user = Auth::user();
 
-	return json_encode($user->applications;
+	return json_encode($user->applications);
 });
 
 Route::middleware('auth')->get('/api/get_reviews', function() {
 	$user = Auth::user();
 
-	return json_encode($user->reviews;
+	return json_encode($user->reviews);
 });
 
 Route::middleware('auth')->get('/api/get_myjobs', function() {
 	$user = Auth::user();
 
-	return json_encode($user->jobs;
+	return json_encode($user->jobs);
 });
 
 Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
