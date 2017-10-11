@@ -15,7 +15,7 @@ class Job extends Model {
     // applicant id = accepted applicant
 
     public function applications() {
-        return $this->hasMany('App\Applicant', 'id');
+        return $this->hasMany('App\Applicant', 'jobid');
     }
 
     public function owner() {
