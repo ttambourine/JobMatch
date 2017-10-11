@@ -67,6 +67,7 @@ Route::middleware('auth')->post('applyforjob', function(Request $request) {
 	$job = Job::findOrFail( $id );
 
 	$userApps = $user->applications();
+	print_r($userApps);
 	foreach($userApps as $app) {
 		if ($app->jobid == $id) {
 			echo "Fail";
@@ -77,7 +78,7 @@ Route::middleware('auth')->post('applyforjob', function(Request $request) {
 	$array = array( "userid" => $user->id, "jobid" => $id, "status" => "Pending" );
 	print_r($array);
 	Applicant::create( $array );
-	return Redirect::to('/home')->with('success', 'Application sent through');
+	//return Redirect::to('/home')->with('success', 'Application sent through');
 });
 
 Route::middleware('auth')->post('update_acc', function(Request $request){
@@ -108,6 +109,12 @@ Route::middleware('auth')->get('/api/get_reviews', function() {
 	$user = Auth::user();
 
 	return json_encode($user->reviews());
+});
+
+Route::middleware('auth')->get('/api/get_myjobs', function() {
+	$user = Auth::user();
+
+	return json_encode($user->jobs());
 });
 
 Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
