@@ -53,7 +53,7 @@
 			</div>
 		<br>
 		<input type="submit" value="Apply for job" class="submitAccForm" style="float: none">
-		<input type="text" name="id" id="id" />
+		<input type="hidden" name="id" id="id" />
 		<br>
 		<br>
 		</div>

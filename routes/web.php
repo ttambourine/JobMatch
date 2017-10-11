@@ -69,12 +69,12 @@ Route::middleware('auth')->post('applyforjob', function(Request $request) {
 	$userApps = $user->applications();
 	foreach($userApps as $app) {
 		if ($app->jobid == $id) {
-			return Redirect::to('welcome')->with('success', 'Duplicate application');
+			return Redirect::to('/')->with('success', 'Duplicate application');
 		}
 	}
 
 	Applicant::create( array( "userid" => $user->id, "jobid" => $id, "status" => "Pending" ) );
-	return Redirect::to('welcome')->with('success', 'Application sent through');
+	return Redirect::to('/')->with('success', 'Application sent through');
 });
 
 Route::middleware('auth')->post('update_acc', function(Request $request){
