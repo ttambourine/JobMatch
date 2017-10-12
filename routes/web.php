@@ -233,7 +233,7 @@ Route::middleware('auth')->get('/api/get_info', function() {
 	return json_encode($user);
 });
 
-Route::middleware('auth')->get('/api/get_info/{id}', function($id) {
+Route::middleware('auth')->get('/api/get_infouser/{id}', function($id) {
 	$user = User::findOrFail($id);
 
 	return json_encode($user);
