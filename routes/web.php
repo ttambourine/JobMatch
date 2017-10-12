@@ -203,6 +203,21 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 	}
 });
 
+Route::middleware('auth')->get('/api/pending_jobs', function() {
+
+		if ( Auth::check() ) {
+		$user = Auth::user();
+		$apps = $User->applications;
+		$jobs = array();
+		$i = 0;
+		foreach($apps as $app) {
+			$jobs[$i++] = $app->job;
+		}
+
+		return json_encode($jobs);
+	}
+});
+
 Route::middleware('auth')->get('/api/get_info', function() {
 	$user = Auth::user();
 
