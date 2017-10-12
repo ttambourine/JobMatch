@@ -234,7 +234,7 @@ Route::middleware('auth')->get('/api/get_info', function() {
 });
 
 Route::middleware('auth')->get('/api/get_info/{id}', function($id) {
-	$user = User::findOrFail($id)
+	$user = User::findOrFail($id);
 
 	return json_encode($user);
 });
