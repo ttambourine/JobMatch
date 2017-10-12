@@ -13,6 +13,8 @@
 			<div class='gap'></div>
 			<a href='/login' class='secondLink'>Login</a>
 		@else
+			<a href='/pending_applications' class='secondLink'>Pending Applications</a>
+			<div class='gap'></div>
 			<a href='/profile' class='secondLink'>Profile</a>
 			<div class='gap'></div>
 			<a href='/preferences' class='secondLink'>Preferences</a>
