@@ -107,7 +107,7 @@
 			});
 
 			$.getJSON("api/get_jobapplicationsusers/"+getUrlParameters("id"), function(data) {
-				for (var i = 0; i < data.length, i++) {
+				for (var i = 0; i < data.length; i++) {
 					$("#appliedusers").append( '<a href="/user/'+data[i].id+'">'+data[i].fname+'</a><br />' );
 				}
 			});
