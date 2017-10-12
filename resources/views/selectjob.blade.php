@@ -62,7 +62,7 @@
         
 	</form>	
 
-	<div id="appliedusers"></div>
+	<div id="appliedusers">Applicants<br/></div>
 
 	<script>
 		function getUrlParameters(parameter){
