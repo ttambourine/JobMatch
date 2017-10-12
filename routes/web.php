@@ -232,6 +232,12 @@ Route::middleware('auth')->get('/api/get_info', function() {
 	return json_encode($user);
 });
 
+Route::middleware('auth')->get('/api/get_info/{id}', function($id) {
+	$user = User::findOrFail($id)
+
+	return json_encode($user);
+});
+
 function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
   $theta = $lon1 - $lon2;
