@@ -205,7 +205,7 @@ Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
 
 Route::middleware('auth')->get('/api/pending_jobs', function() {
 
-		if ( Auth::check() ) {
+	if ( Auth::check() ) {
 		$user = Auth::user();
 		$apps = $user->applications;
 		$jobs = array();
