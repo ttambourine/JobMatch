@@ -62,6 +62,8 @@
         
 	</form>	
 
+	<div id="appliedusers"></div>
+
 	<script>
 		function getUrlParameters(parameter){
 	       var currLocation = window.location.search,
@@ -103,6 +105,12 @@
 					$("#tags").append('<p>Expertise #3</p><input type="text" name="tag3" id="tag3" value="'+tag_names[data.tag3]+'" disabled />');
 				}
 			});
+
+			$.getJSON("api/get_jobapplicationsusers/+"getUrlParameters("id"), function(data) {
+				for (var i = 0; i < data.length, i++) {
+					$("#appliedusers").append( '<a href="/user/'+data[i].id+'">'.data[i].fname.'</a><br />' );
+				}
+			})
 		});
 
         
