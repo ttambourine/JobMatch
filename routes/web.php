@@ -117,10 +117,18 @@ Route::middleware('auth')->get('/api/get_myjobs', function() {
 	return json_encode($user->jobs);
 });
 
-Route::middleware('auth')->get('/api/get_jobapplications/{id}', function($id) {
+Route::middleware('auth')->get('/api/get_jobapplicationsusers/{id}', function($id) {
 	$job = Job::findOrFail( $id );
 
-	return json_encode($job->applications);
+	//return json_encode($job->applications);
+	$users = array();
+	$i = 0;
+	$apps = $job->applications;
+	foreach($apps as $app) {
+		$users[$i++] = $app->user;
+	}
+
+	return json_encode($users);
 });
 
 Route::middleware('auth')->get('/api/get_matches/{id}', function($id) {
