@@ -18,6 +18,7 @@
 Route::get('/faq', function () { return view('faq'); });
 Route::get('/contact', function () { return view('contact'); });
 Route::middleware('auth')->get('/profile', function () { return view('profile'); });
+Route::middleware('auth')->get('/user', function () { return view('user'); });
 Route::get('/about', function () { return view('about'); });
 Route::middleware('auth')->get('/preferences', function () { return view('preferences'); });
 //Route::get('/register', function () { return view('register'); });
