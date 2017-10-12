@@ -207,7 +207,7 @@ Route::middleware('auth')->get('/api/pending_jobs', function() {
 
 		if ( Auth::check() ) {
 		$user = Auth::user();
-		$apps = $User->applications();
+		$apps = $user->applications;
 		$jobs = array();
 		$i = 0;
 		foreach($apps as $app) {
